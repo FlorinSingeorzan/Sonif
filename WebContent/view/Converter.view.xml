@@ -1,0 +1,77 @@
+<mvc:View controllerName="sap.ui.Odata.webapp.controller.Converter"
+	xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:core="sap.ui.core"  xmlns:f="sap.ui.layout.form" class="whiteBackground">
+
+	<Page showHeader="false" backgroundDesign="Transparent">
+		<mvc:XMLView viewName="sap.ui.Odata.webapp.view.Toolbar" />
+		<Panel class="sapUiNoContentPadding">
+			<content >
+				<FlexBox  class="fade_line mid sapUiLargeMarginTop"/>
+				<f:SimpleForm  minWidth="1024" maxContainerCols="12"
+							  width="100%" editable="true" layout="ResponsiveGridLayout"
+							  labelSpanL="2" labelSpanM="2" labelSpanS="2" emptySpanS="0"
+							  emptySpanL="0" emptySpanM="0" columnsL="2" columnsM="2" >
+					<f:content >
+						<core:Title text="To Change" />
+						<Input class="phonemin textBigSize sapUiLargeMargin" type="Number" width="30%" id="amountCC"
+							   placeholder="Amount" valueLiveUpdate="true" liveChange="showConversion"/>
+						<core:Title text="Result" />
+						<Text id="resultCC" class="textBigSize sapUiLargeMargin" text="No Selection"/>
+						<core:Title text="From Currency" />
+						<ComboBox id="fromCC"
+								  showSecondaryValues= "true"
+								  filterSecondaryValues="true"
+								  class="phonemin sapUiLargeMarginBegin"
+								  width="30%"
+								  items="{
+										path: 'Coins>/currencies'
+
+									}"
+								  change="showConversion"
+						>
+							<core:ListItem key="{Coins>Name}" text="{Coins>Name}" additionalText="{Coins>Symbol}"/>
+						</ComboBox>
+						<core:Title text="To Currency" />
+						<ComboBox   id="toCC"
+									showSecondaryValues= "true"
+									filterSecondaryValues="true"
+									class="phonemin sapUiLargeMarginBegin"
+									width="30%"
+									items="{
+										path: 'Coins>/currencies'
+
+									}"
+									change="showConversion">
+							<core:ListItem key="{Coins>Name}" text="{Coins>Name}" additionalText="{Coins>Symbol}"/>
+						</ComboBox>
+
+					</f:content>
+					<f:layoutData>
+						<FlexItemData shrinkFactor="0" backgroundDesign="Translucent" />
+					</f:layoutData>
+				</f:SimpleForm>
+				<Panel expandable="true" expanded="false" headerText="Fast Compare" width="auto" class="sapUiResponsiveMargin">
+					<content>
+						<Input id="bitcoin" type="Number" liveChange="bitcoinChange"
+							   width="50%" valueLiveUpdate="true" placeholder="Bitcoin" />
+						<Input id="ethereum" type="Number" liveChange="ethereumChange"
+							   width="50%" valueLiveUpdate="true" placeholder="Ethereum" />
+						<Input id="iota" type="Number" liveChange="iotaChange"
+							   width="50%" valueLiveUpdate="true" placeholder="IOTA" />
+						<Input id="ripple" type="Number" liveChange="rippleChange"
+							   width="50%" valueLiveUpdate="true" placeholder="Ripple" />
+						<Input id="dollar" type="Number" liveChange="dollarChange"
+							   width="100%" valueLiveUpdate="true" placeholder="Dollar" />
+					</content>
+				</Panel>
+				<MessageStrip class="sapUiLargeMargin whiteBackground" 	text="{i18n>converterInfo}" showIcon="true"/>
+
+
+			</content>
+		<FlexBox width="auto" height="15rem" backgroundDesign="Transparent"/>
+		</Panel>
+
+		<mvc:XMLView viewName="sap.ui.Odata.webapp.view.Footer" />
+
+	</Page>
+
+</mvc:View>

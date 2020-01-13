@@ -1,0 +1,120 @@
+<mvc:View xmlns:mvc="sap.ui.core.mvc"
+		  xmlns:core="sap.ui.core"
+		  xmlns="sap.m" xmlns:l="sap.ui.layout"
+		  xmlns:suite="sap.suite.ui.commons"
+		  xmlns:viz="sap.viz.ui5.controls"
+		  controllerName="sap.ui.Odata.webapp.controller.History"
+		  class="whiteBackground"
+>
+	<Page backgroundDesign="Transparent" showHeader="false">
+		<mvc:XMLView viewName="sap.ui.Odata.webapp.view.Toolbar" />
+		<Panel class="sapUiNoContentPadding">
+		<content>
+			<l:Grid defaultSpan="L12 M12 S12"
+				position="Center" vSpacing="0" hSpacing="5">
+				<suite:ChartContainer showSelectionDetails="true"
+					autoAdjustHeight="false" fullScreen="true" showFullScreen="true" 
+					title="{
+						parts: [
+							'i18n>historyProgress'
+						],
+						formatter: 'jQuery.sap.formatMessage'
+				}">
+					<suite:ChartContainerContent icon="sap-icon://calendar"
+						title="{i18n>chartContainerBulletChartContentTitleWeek}">
+						<suite:content>
+							<core:Fragment
+								fragmentName="sap.ui.Odata.webapp.fragment.BitcoinWeek"
+								type="JS" />
+						</suite:content>
+					</suite:ChartContainerContent>
+					<suite:ChartContainerContent icon="sap-icon://appointment-2"
+						title="{i18n>chartMonthBtcHistory}">
+						<suite:content>
+							<core:Fragment
+								fragmentName="sap.ui.Odata.webapp.fragment.BitcoinMonth"
+								type="JS" />
+						</suite:content>
+					</suite:ChartContainerContent>
+					<suite:ChartContainerContent icon="sap-icon://vertical-bullet-chart"
+						title="{i18n>chartAllBtcHistory}">
+						<suite:content>
+							<core:Fragment fragmentName="sap.ui.Odata.webapp.fragment.BitcoinAll"
+								type="JS" />
+						</suite:content>
+					</suite:ChartContainerContent>
+					<suite:ChartContainerContent icon="sap-icon://check-availability"
+						title="{i18n>historyCustom}">
+						<suite:content>
+							<VBox>
+								<FlexBox  wrap="Wrap" justifyContent="Center" class="hSearch sapUiMediumMargin" width="auto" >
+									<ComboBox placeholder="Select Currency" id="hCurrencyType" showSecondaryValues= "true"
+											  filterSecondaryValues="true"
+											  textAlign="Center"
+											  change="hCurrencySelect"
+											  class="sapUiMediumMargin" width="90%"
+
+											  items="{
+														path: 'Coins>/currencies'
+													}">
+										<core:ListItem key="{Coins>Name}" text="{Coins>Name}" additionalText="{Coins>Symbol}"/>
+									</ComboBox>
+									<Input liveChange="verifyPeriod" textAlign="Center"  id="hPeriod" type="Number" placeholder="Enter Period (max 2000 days)"  class="phonemin sapUiMediumMargin" width="90%"/>
+									<HBox wrap="NoWrap">
+										<CheckBox id="hAllData" select="allHistoryData" class="sapUiMediumMarginTop" wrapping="true" text="All Historical values" width="100%"/>
+										<Button class="sapUiMediumMargin" text="Get" press="getHistoricalData" />
+									</HBox>
+								</FlexBox>
+
+
+								<viz:Popover id="popOver" />
+								<core:Fragment fragmentName="sap.ui.Odata.webapp.fragment.HistorySearch"
+											   type="JS" />
+
+							</VBox>
+						</suite:content>
+					</suite:ChartContainerContent>
+					<suite:ChartContainerContent icon="sap-icon://table-chart"
+						title="{i18n>progress}">
+						<suite:content>
+							<Table  growing="true" growingScrollToLoad="true" growingThreshold="2000"  noDataText="First Make a Historical Search" alternateRowColors="true" id="valueTable" items="{search>/Data}">
+								<columns>
+									<Column hAlign="Center">
+										<Text  text="{i18n>date}" />
+									</Column>
+									<Column hAlign="Center">
+										<Text  text="{i18n>valueIn} {settings>/BaseExchange}" />
+									</Column>
+								</columns>
+								<items>
+									<ColumnListItem>
+										<cells>
+											<Text
+												text="{
+												path: 'search>time',
+												formatter: '.formatJSONDate',
+												templateShareable:true
+												}" />
+											<Text
+												text="{
+												path: 'search>close',
+												formatter: '.formatNumber',
+												templateShareable:true
+												}" />
+										</cells>
+									</ColumnListItem>
+								</items>
+							</Table>
+						</suite:content>
+					</suite:ChartContainerContent>
+				</suite:ChartContainer>
+			</l:Grid>
+			<FlexBox width="auto" height="15rem" backgroundDesign="Translucent"/>
+
+		</content>
+
+		</Panel>
+		<mvc:XMLView viewName="sap.ui.Odata.webapp.view.Footer" />
+
+	</Page>
+</mvc:View>

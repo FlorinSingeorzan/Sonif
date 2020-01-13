@@ -1,0 +1,105 @@
+<mvc:View controllerName="sap.ui.Odata.webapp.controller.CryptoDetail"
+	xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:core="sap.ui.core"
+	xmlns:microchart="sap.suite.ui.microchart"
+	xmlns:f="sap.ui.layout.form"
+	class="whiteBackground">
+
+	<Page  showHeader="false" backgroundDesign="Transparent">
+
+		<Toolbar class="subHeaderDesign">
+		<Button icon="sap-icon://nav-back" press="onNavBack"/>
+	
+		</Toolbar>
+		<Panel class="sapUiNoContentPadding">
+			<content>
+				<FlexBox class="sapUiLargeMargin sapUiMedium" justifyContent="Center">
+					<Label design="Bold" class="textBigSize" text="{rawvalue>/FROMSYMBOL}"/>
+				</FlexBox>
+				<VBox fitContainer="false" class="sapUiMediumMarginTop">
+					<f:SimpleForm minWidth="1024" maxContainerCols="6"
+						width="90%" editable="false" layout="ResponsiveGridLayout"
+						labelSpanL="8" labelSpanM="8" labelSpanS="8" emptySpanS="0"
+						emptySpanL="0" emptySpanM="0" columnsL="4" columnsM="4">
+						<f:content>
+							<microchart:InteractiveBarChart
+								displayedBars="10" labelWidth="10%" selectionChanged="selectionChanged"
+								press="press">
+								<microchart:bars>
+									<microchart:InteractiveBarChartBar
+										label="Price" value="{rawvalue>/PRICE}" displayedValue="{rawvalue>/PRICE}" />
+									<microchart:InteractiveBarChartBar
+										label="Open Today" value="{rawvalue>/OPENDAY}" displayedValue="{rawvalue>/OPENDAY}" />
+									<microchart:InteractiveBarChartBar
+										label="High Today" value="{rawvalue>/HIGHDAY}" displayedValue="{rawvalue>/HIGHDAY}" />
+									<microchart:InteractiveBarChartBar
+										label="Low Today" value="{rawvalue>/LOWDAY}" displayedValue="{rawvalue>/LOWDAY}" />
+									<microchart:InteractiveBarChartBar
+										label="Open 24 Hours" value="{rawvalue>/OPEN24HOUR}"
+										displayedValue="{rawvalue>/OPEN24HOUR}" />
+									<microchart:InteractiveBarChartBar
+										label="High 24 Hours" value="{rawvalue>/HIGH24HOUR}"
+										displayedValue="{rawvalue>/HIGH24HOUR}" />
+									<microchart:InteractiveBarChartBar
+										label="Low 24 Hours" value="{rawvalue>/LOW24HOUR}"
+										displayedValue="{rawvalue>/LOW24HOUR}" />
+								</microchart:bars>
+							</microchart:InteractiveBarChart>
+						</f:content>
+						<f:layoutData>
+							<FlexItemData shrinkFactor="0" backgroundDesign="Translucent" />
+						</f:layoutData>
+					</f:SimpleForm>
+				</VBox>
+				<VBox fitContainer="true">
+					<f:SimpleForm  minWidth="1024"
+						maxContainerCols="2" editable="false" layout="ResponsiveGridLayout"
+						labelSpanL="4" labelSpanM="4" emptySpanL="0" emptySpanM="0"
+						columnsL="2" columnsM="2">
+						<f:content>
+							<core:Title text="Change" />
+							<Label text="Change 24 Hours" />
+							<Text text="{rawvalue>/CHANGE24HOUR}" />
+							<Label text="Change 24 Hours Percent" />
+							<Text text="{rawvalue>/CHANGEPCT24HOUR} %" />
+							<Label text="Change Today" />
+							<Text text="{rawvalue>/CHANGEDAY}" />
+							<Label text="Change Today Percent" />
+							<Text text="{rawvalue>/CHANGEPCTDAY}  %" />
+							<core:Title text="Volume" />
+							<Label text="Volome Today" />
+							<Text text="{rawvalue>/VOLUMEDAY}" />
+							<Label text="Volume 24 Hours" />
+							<Text text="{rawvalue>/VOLUME24HOUR}" />
+							<Label text="Total Volume 24 Hours" />
+							<Text text="{rawvalue>/TOTALVOLUME24H}" />
+							<core:Title text="Stock" />
+							<Label text="Supply" />
+							<Text text="{rawvalue>/SUPPLY}" />
+							<Label text="Market Capital" />
+							<Text text="{rawvalue>/MKTCAP}" />
+							<core:Title text="" />
+							<core:Title text="Data" />
+							<Label text="last update" />
+							
+							<Text
+												text="{
+												path: 'rawvalue>/LASTUPDATE',
+												formatter: '.formatJSONDate'
+												}" />
+							<Text wrapping="true" text="Data is provided in {settings>/BaseExchange} and it refresh every minute" />
+
+
+						</f:content>
+						<f:layoutData> 
+							<FlexItemData shrinkFactor="0" backgroundDesign="Translucent" />
+						</f:layoutData>
+					</f:SimpleForm>
+
+				</VBox>
+				
+			</content>
+		</Panel>
+		<mvc:XMLView viewName="sap.ui.Odata.webapp.view.Footer" />
+	</Page>
+
+</mvc:View>

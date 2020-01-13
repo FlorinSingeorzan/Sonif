@@ -1,0 +1,62 @@
+<mvc:View class="whiteBackground" controllerName="sap.ui.Odata.webapp.controller.Donate"
+          xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:core="sap.ui.core"  xmlns:f="sap.ui.layout.form"  xmlns:html="http://www.w3.org/1999/xhtml">
+
+    <Page showHeader="false" backgroundDesign="Transparent" >
+        <mvc:XMLView viewName="sap.ui.Odata.webapp.view.Toolbar" />
+        <FlexBox  class="fade_line mid sapUiLargeMarginTop"/>
+        <Panel class="sapUiNoContentPadding" backgroundDesign="Solid">
+
+            <!--            <FlexBox width="auto" height="15rem" backgroundDesign="Transparent"/>-->
+            <VBox  alignItems="Center" >
+                <VBox class="sapUiLargeMargin">
+                   <Title class="sapUiLargeMarginTop textBigSize" text="Buy Us a coffee"/>
+                </VBox>
+                <VBox width="auto" class="sapUiLargeMargin contactBox" backgroundDesign="Translucent">
+                    <ImageContent class="contactIcon" src="sap-icon://money-bills"/>
+                    <HBox wrap="Wrap"   justifyContent="Start" backgroundDesign="Translucent">
+
+                        <VBox   class="sapUiSmallMargin" backgroundDesign="Translucent">
+                            <Text class="sapUiSmallMargin textBigSize" text="Metamask Donation"/>
+                            <VBox id="emailForm" class="sapUiSmallMargin">
+                                <Label class="sapUiSmallMarginTop" text="Donation Amount"/>
+                                <Input type="Number"  id="amount" placeholder="Value"  />
+                                <HBox>
+                                    <Button id="submitDonation" text="Donate" press="makeDonation" />
+                                    <BusyIndicator id="busySending" visible="false" class="sapUiTinyMargin" text="...sending" />
+                                </HBox>
+                                <Panel expandable="true" expanded="false" headerText="Advanced" width="auto" class="">
+                                    <content>
+                                        <VBox backgroundDesign="Solid" >
+<!--                                            <Label class="sapUiSmallMarginTop" text="Metamask address"/>-->
+<!--                                            <Input id="address"  placeholder="Your address"   />-->
+                                            <Label  class="sapUiSmallMarginTop" text="The amount of gas to use for the transaction"/>
+                                            <Input type="Number" id="gas"    placeholder="Gas"  value="21000"/>
+                                            <Label class="sapUiSmallMarginTop" text="The price of gas for this transaction in wei"/>
+                                            <Input type="Number" id="gasPrice"    placeholder="Gas Price" value="1"/>
+                                            <Label class="sapUiSmallMarginTop" text="Associated data of the message"/>
+                                            <Input id="data"    placeholder="Data" />
+                                            <Label class="sapUiSmallMarginTop" text="Integer of a nonce"/>
+                                            <Input id="nonce"  type="Number" placeholder="Nonce" />
+                                        </VBox>
+                                    </content>
+                                </Panel>
+                                <Label wrapping="true" class="sapUiSmallMarginTop" text="*We appreciate every support and we will continuously improve Sonif"/>
+                            </VBox>
+                        </VBox>
+                        <VBox class="sapUiSmallMargin" backgroundDesign="Translucent">
+                            <Text class="sapUiSmallMargin textBigSize" text="Share some Ether for a coffee"/>
+                            <Text class="sapUiSmallMargin textBigSize" text="Metamask is a secure way to &#10; send money over ethereum network. &#10; We will only use your public address &#10; to identify you as a sponsor. "/>
+                            <Text wrapping="true" class="sapUiSmallMargin textBigSize" text="You can install Metamask extension &#10; for your browser by accessing this link:   "/>
+                            <Link target="_blank" class="sapUiSmallMarginBegin textBigSize" text="Get Metamask"  href="https://chrome.google.com/webstore/detail/metamask/nkbihfbeogaeaoehlefnkodbefgpgknn"/>
+                        </VBox>
+                    </HBox>
+                </VBox>
+            </VBox>
+            <FlexBox height="200px"/>
+        </Panel>
+
+        <mvc:XMLView viewName="sap.ui.Odata.webapp.view.Footer" />
+
+    </Page>
+
+</mvc:View>

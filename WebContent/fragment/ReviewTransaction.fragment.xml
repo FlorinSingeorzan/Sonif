@@ -1,0 +1,15 @@
+<core:FragmentDefinition id="reviewFragment" xmlns="sap.m"
+	xmlns:core="sap.ui.core" xmlns:html="http://www.w3.org/1999/xhtml"
+>
+	<Page showHeader="false">
+	<MessageStrip showIcon="true" class="sapUiSmallMarginBottom" id="reportFinalMessage"/>
+	<html:form>
+	<Input  id="privateKey" type="Password" class="phonemin" placeholder="Private Key" width="40%" />
+	<core:Icon class="sapUiSmallMargin" press="toggleShowKey" src="sap-icon://show"/>
+	</html:form>
+	<HBox>
+	<Button class="sapUiSmallMarginEnd" text="Complete Transaction" press="logTransaction" />
+	<Button class="sapUiSmallMarginBegin" text="Cancel" press="handleWizardCancel" />
+	</HBox>
+	</Page>
+</core:FragmentDefinition>

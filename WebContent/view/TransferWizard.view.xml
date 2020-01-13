@@ -1,0 +1,119 @@
+<mvc:View
+		height="100%"
+		controllerName="sap.ui.Odata.webapp.controller.TransferWizzard"
+		xmlns:core="sap.ui.core"
+		xmlns:mvc="sap.ui.core.mvc"
+		xmlns="sap.m">
+		<NavContainer id="wizardNavContainer">
+			<pages>
+				<Page
+				backgroundDesign="List"
+				id="wizardContentPage"
+				showHeader="false">
+					<content>
+						<Wizard id="CreateProductWizard"
+								enableBranching="true"
+								complete="wizardCompletedHandler"
+								finishButtonText="Generate Transaction">
+								<WizardStep id="SelectType"
+										nextStep="FromCurrencyStep"
+										title="Select Type"
+										validated="true">
+								<SegmentedButton  select="setTransferType" id="typeSelection" selectedKey="{CC>/selectedTransactionType}">
+									<items>
+										<SegmentedButtonItem  key="Exchange" icon="sap-icon://opportunity" text="Exchange" />
+										<SegmentedButtonItem key="Transfer" icon="sap-icon://share" text="Transfer to address" />
+									</items>
+								</SegmentedButton>
+							</WizardStep>
+							<WizardStep id="FromCurrencyStep"
+										subsequentSteps="TransferStep, ExchangeStep"
+										title="Currency Select "
+										validated="false"
+										activate="fromCurrencyValidation"
+										complete="completeFromCurrencyStep">
+								<MessageStrip class="sapUiSmallMarginBottom"
+										text="Select the currency you want to exchange"
+										showIcon="true"/>
+								<VBox>
+									<ComboBox
+										class="sapUiSmallMarginBottom phonemin"
+										id="fromCurrencyType"
+										showSecondaryValues= "true"
+										filterSecondaryValues= "true"
+										value="{CC>/fromComboBoxValue}"
+
+										width="30%"
+										items="{
+											path: '/WalletSet',
+											sorter: { path: 'Currency' }
+										}"
+										change="currencyTypeChange">
+
+										<core:ListItem key="{Ddtext}" text="{Ddtext}" additionalText="{Currency}"/>
+									</ComboBox>
+									<Label text="From Currency:" />
+									<Text class="sapUiTinyMarginBottom" text="{path: 'CC>/fromComboBoxValue'}" />
+
+									<Input valueStateText="Wrong amount or currency" valueState="{CC>/correctAmount}"	description="No currency selected"
+									liveChange="validateTransferAmount"  class="phonemin" id="fromCurrencyAmount" type="Number"  fieldWidth="60%"
+										width="50%" />
+									<Label text="* the amount of selected currency for transfer. You need to have the amount in your wallet"/>
+									<CheckBox id="entireBalance"  text="Send Entire Balance"  selected="false"  select="addEntireBalance" />
+								</VBox>
+							</WizardStep>
+							<WizardStep id="ExchangeStep"
+										nextStep="ReviewStep"
+										validated="false"
+										complete="completeExchangeStep"
+										title="Exchange Information"
+										>
+								<VBox>
+							
+								<ComboBox
+									class="sapUiSmallMarginBottom phonemin"
+									id="toCurrencyType"
+									showSecondaryValues= "true"
+									filterSecondaryValues= "true"
+									value="{CC>/toComboBoxValue}"
+									
+									width="30%"
+									items="{
+										path: '/CurrencySet',
+										sorter: { path: 'Name' }
+									}"
+									change="convertAmount">
+							
+									<core:ListItem key="{Name}" text="{Name}" additionalText="{Symbol}"/>
+								</ComboBox>
+								<Label text="To Currency:" />
+								<Text class="sapUiSmallMarginBottom" text="{path: 'CC>/toComboBoxValue'}" />
+								<Input  editable="false" class="phonemin"  id="toCurrencyAmount" type="Number" 
+									width="30%" />
+								<Label text="* this value is an approximation"/>
+							</VBox>
+							</WizardStep>
+							<WizardStep id="TransferStep"
+										nextStep="ReviewStep"
+										validated="true"
+										complete="completeTransferStep"
+										title="Transfer Information">
+								<MessageStrip class="sapUiSmallMarginBottom"
+										text="The address that will receive your transfer"
+										showIcon="true"/>
+								
+								<Input class="phonemin" id="toTransferAddress" placeholder="Transfer Address"  width="30%" />
+							</WizardStep>
+							<WizardStep id="ReviewStep"
+										complete="completeTransaction"
+										validated="true"
+										title="Review">
+								 <MessageStrip id="reportMessage"/>
+								<Button class="" text="Cancel" type="Emphasized" icon="sap-icon://decline"  press="handleWizardCancel" />
+							</WizardStep>
+						</Wizard>
+					</content>
+				</Page>
+			</pages>
+		</NavContainer>
+</mvc:View>

@@ -1,0 +1,134 @@
+<mvc:View controllerName="sap.ui.Odata.webapp.controller.VCurrency"
+		  xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m"
+		  class="whiteBackground">
+
+	<Page showHeader="false" backgroundDesign="Transparent">
+		<!-- <subHeader class="subHeaderDesign"> -->
+		<!-- </subHeader> -->
+		<Panel class="sapUiNoContentPadding">
+			<mvc:XMLView id="currencyToolbar" viewName="sap.ui.Odata.webapp.view.Toolbar" />
+			<content>
+				<FlexBox  class="fade_line mid sapUiLargeMarginTop"/>
+			<FlexBox class="upFlex" backgroundDesign="Solid"   justifyContent="Center" wrap="Wrap"  alignItems="Center" alignContent="SpaceAround" width="100%">
+				<items>
+					<FlexBox wrap="Wrap"  class="vCurrencyFlexBox sapUiLargeMarginTop"  height="180px">
+						<ImageContent class="vCurrencyImages"  src="images/btc.png" press="showCrypto('Bitcoin','BTC')"/>
+					</FlexBox>
+					<FlexBox wrap="Wrap"  class="vCurrencyFlexBox sapUiLargeMarginTop" height="180px">
+						<ImageContent class="vCurrencyImages"  src="images/eth.png" press="showCrypto('Ethereum','ETH')"/>
+					</FlexBox>
+
+					<FlexBox wrap="Wrap"  class="vCurrencyFlexBox sapUiLargeMarginTop"  height="180px">
+						<ImageContent class="vCurrencyImages"  src="images/xrp.png" press="showCrypto('Ripple','XRP')"/>
+					</FlexBox>
+					<FlexBox wrap="Wrap"  class="vCurrencyFlexBox sapUiLargeMarginTop" height="180px">
+						<ImageContent class="vCurrencyImages"  src="images/eos.png" press="showCrypto('Eos','EOS')"/>
+					</FlexBox>
+<!--					edit-->
+					<FlexBox alignItems="Center"  justifyContent="Center" wrap="Wrap">
+						<FlexBox>
+					<FlexBox wrap="Wrap"  class="vCurrencyFlexBox sapUiLargeMarginTop "  height="180px">
+						<ImageContent class="vCurrencyImages"  src="images/stelar.png" press="showCrypto('Stellar','XLM')"/>
+					</FlexBox>
+					<FlexBox wrap="Wrap"  class="vCurrencyFlexBox sapUiLargeMarginTop " height="180px">
+						<ImageContent class="vCurrencyImages"  src="images/tether.png" press="showCrypto('Tether','USDT')"/>
+					</FlexBox>
+						</FlexBox>
+
+<!--												remove flex and thissssssssssssssssss |-->
+						<FlexBox>
+					<FlexBox wrap="Wrap"  class="vCurrencyFlexBox sapUiLargeMarginTop "  height="180px">
+						<ImageContent class="vCurrencyImages"  src="images/ethc.png" press="showCrypto('Ethereum Classic','ETC')"/>
+					</FlexBox>
+					<FlexBox wrap="Wrap"  class="vCurrencyFlexBox sapUiLargeMarginTop" height="180px">
+						<ImageContent class="vCurrencyImages"  src="images/binance.png" press="showCrypto('Binance Coin','BNB')"/>
+					</FlexBox>
+						</FlexBox>
+					</FlexBox>
+
+<!--					/edit-->
+
+				</items>
+			</FlexBox>
+
+			<FlexBox class="upFlex" backgroundDesign="Solid"   justifyContent="Center" wrap="Wrap"  alignItems="Center" alignContent="SpaceAround" width="100%" >
+				<items>
+					<FlexBox wrap="Wrap"  class="vCurrencyFlexBox sapUiLargeMarginTop"  height="180px">
+						<ImageContent class="vCurrencyImages"  src="images/iota.png" press="showCrypto('Iota','MIOTA')"/>
+					</FlexBox>
+					<FlexBox wrap="Wrap"  class="vCurrencyFlexBox sapUiLargeMarginTop" height="180px">
+						<ImageContent class="vCurrencyImages"  src="images/neo.png" press="showCrypto('Neo','NEO')"/>
+					</FlexBox>
+
+					<FlexBox wrap="Wrap"  class="vCurrencyFlexBox sapUiLargeMarginTop"  height="180px">
+						<ImageContent class="vCurrencyImages"  src="images/xmr.png" press="showCrypto('Monero','XMR')"/>
+					</FlexBox>
+					<FlexBox wrap="Wrap"  class="vCurrencyFlexBox sapUiLargeMarginTop" height="180px">
+						<ImageContent class="vCurrencyImages"  src="images/dash.png" press="showCrypto('Dash','DASH')"/>
+					</FlexBox>
+
+					<FlexBox wrap="Wrap"  class="vCurrencyFlexBox sapUiLargeMarginTop"  height="180px">
+						<ImageContent class="vCurrencyImages"  src="images/cardano.png" press="showCrypto('Cardano','ADA')"/>
+					</FlexBox>
+					<FlexBox wrap="Wrap"  class="vCurrencyFlexBox sapUiLargeMarginTop" height="180px">
+						<ImageContent class="vCurrencyImages"  src="images/nem.png" press="showCrypto('Nem','XEM')"/>
+					</FlexBox>
+
+					<FlexBox wrap="Wrap"  class="vCurrencyFlexBox sapUiLargeMarginTop"  height="180px">
+						<ImageContent class="vCurrencyImages"  src="images/omise.png" press="showCrypto('Omise GO','OMG')"/>
+					</FlexBox>
+					<FlexBox wrap="Wrap"  class="vCurrencyFlexBox sapUiLargeMarginTop" height="180px">
+						<ImageContent class="vCurrencyImages"  src="images/tezos.png" press="showCrypto('Tezos','XTZ')"/>
+					</FlexBox>
+
+
+
+				</items>
+			</FlexBox>
+
+			<FlexBox class="upFlex" backgroundDesign="Solid"   justifyContent="Center" wrap="Wrap"  alignItems="Center" alignContent="SpaceAround" width="100%" >
+				<items>
+					<FlexBox wrap="Wrap"  class="vCurrencyFlexBox sapUiLargeMarginTop"  height="180px">
+						<ImageContent class="vCurrencyImages"  src="images/trx.jpg" press="showCrypto('Tron','TRX')"/>
+					</FlexBox>
+					<FlexBox wrap="Wrap"  class="vCurrencyFlexBox sapUiLargeMarginTop" height="180px">
+						<ImageContent class="vCurrencyImages"  src="images/ltc.png" press="showCrypto('Litecoin','LTC')"/>
+					</FlexBox>
+
+					<FlexBox wrap="Wrap"  class="vCurrencyFlexBox sapUiLargeMarginTop"  height="180px">
+						<ImageContent class="vCurrencyImages"  src="images/zec.png" press="showCrypto('Z Cash','ZEC')"/>
+					</FlexBox>
+					<FlexBox wrap="Wrap"  class="vCurrencyFlexBox sapUiLargeMarginTop" height="180px">
+						<ImageContent class="vCurrencyImages"  src="images/bch.png" press="showCrypto('Bitcoin Cash','BCH')"/>
+					</FlexBox>
+
+					<FlexBox wrap="Wrap"  class="vCurrencyFlexBox sapUiLargeMarginTop"  height="180px">
+						<ImageContent class="vCurrencyImages"  src="images/btcgold.png" press="showCrypto('Bitcoin Gold','BTG')"/>
+					</FlexBox>
+					<FlexBox wrap="Wrap"  class="vCurrencyFlexBox sapUiLargeMarginTop" height="180px">
+						<ImageContent class="vCurrencyImages"  src="images/decred.png" press="showCrypto('Decred','DCR')"/>
+					</FlexBox>
+
+					<FlexBox wrap="Wrap"  class="vCurrencyFlexBox sapUiLargeMarginTop"  height="180px">
+						<ImageContent class="vCurrencyImages"  src="images/qtum.png" press="showCrypto('Qtum','QTUM')"/>
+					</FlexBox>
+					<FlexBox wrap="Wrap"  class="vCurrencyFlexBox sapUiLargeMarginTop" height="180px">
+						<ImageContent class="vCurrencyImages"  src="images/0x.png" press="showCrypto('0x','ZRX')"/>
+					</FlexBox>
+				</items>
+			</FlexBox>
+				<FlexBox class="sapUiLargeMargin">
+					<Text class="textBigSize" text="Volatility Computer"/>
+
+						<Button text="Volatility"/>
+				</FlexBox>
+
+		</content>
+			<FlexBox width="auto" height="15rem" backgroundDesign="Translucent"/>
+		</Panel>
+		<mvc:XMLView viewName="sap.ui.Odata.webapp.view.Footer" />
+	</Page>
+
+
+
+</mvc:View>

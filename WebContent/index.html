@@ -1,0 +1,36 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta charset="UTF-8">
+
+<title>Sonif</title>
+	<script id="sap-ui-bootstrap"
+		src="https://sapui5.hana.ondemand.com/resources/sap-ui-core.js"
+		data-sap-ui-libs="sap.m" data-sap-ui-theme="sap_belize_plus"
+		data-sap-ui-compatVersion="edge"
+		data-sap-ui-resourceroots='{"sap.ui.Odata.webapp": ""}'>
+	</script>
+	<!--		src="https://sapui5.hana.ondemand.com/resources/sap-ui-core.js"-->
+<!--	src="https://sapui5.netweaver.ondemand.com/resources/sap-ui-core.js"-->
+	<script>
+		sap.ui.getCore().attachInit(function() {
+			sap.ui.require([
+				"sap/m/Shell",
+				"sap/ui/core/ComponentContainer"
+			], function(Shell, ComponentContainer) {			
+					jQuery.sap.setIcons({
+						favicon: "images/favicon.ico",
+					});
+					app: new ComponentContainer({
+						height: "100%",
+						name: "sap.ui.Odata.webapp"
+					}).placeAt("content");
+			});
+		});
+	</script>
+</head>
+<body class="sapUiBody" id="content">
+</body>
+</html>

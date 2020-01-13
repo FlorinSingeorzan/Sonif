@@ -1,0 +1,20 @@
+<core:FragmentDefinition xmlns="sap.m"
+	xmlns:core="sap.ui.core">
+	<Dialog id="dialog" contentWidth="auto" contentHeight="auto"
+		class="sapUiSizeCompact" xmlns:html="http://www.w3.org/1999/xhtml">
+		<content>
+			<FlexBox id="coin"
+				direction="Column" justifyContent="Center" width="700px" height="auto">
+				<html:script name="ccoin" src="controller/crypto.js" type="application/javascript"/>
+			</FlexBox>
+		</content>
+		<buttons>
+			<Button text="Details" press="onShowDetails"/>
+			<Button text="Ok" press="onClose"/>
+			<Button text="Refresh" press="onRefresh"/>
+		</buttons>
+		<endButton>
+			<Button></Button>
+		</endButton>
+	</Dialog>
+</core:FragmentDefinition>

@@ -1,0 +1,101 @@
+<mvc:View controllerName="sap.ui.Odata.webapp.controller.Volatility"
+          xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:core="sap.ui.core"  xmlns:f="sap.ui.layout.form" class="whiteBackground">
+
+    <Page showHeader="false" backgroundDesign="Transparent">
+        <mvc:XMLView viewName="sap.ui.Odata.webapp.view.Toolbar" />
+        <Panel class="sapUiNoContentPadding">
+            <content >
+                <FlexBox  class="fade_line mid sapUiLargeMarginTop"/>
+
+
+                <VBox alignItems="Center" >
+
+                    <VBox width="auto" class="sapUiLargeMargin contactBox" backgroundDesign="Translucent" >
+                        <ImageContent class="contactIcon" src="sap-icon://line-chart-time-axis"/>
+                        <VBox justifyContent="Center" alignItems="Center">
+                            <Label design="Bold" text="Volatility Computer"/>
+                        </VBox>
+                        <HBox wrap="Wrap" class="textBigSize"  justifyContent="Start" backgroundDesign="Translucent">
+
+                            <VBox class="sapUiSmallMargin" backgroundDesign="Translucent">
+                                <Label class="sapUiMediumMargin" text="Base Currency"/>
+                                <ComboBox id="fromCC"
+                                          showSecondaryValues= "true"
+                                          filterSecondaryValues="true"
+                                          class="phonemin sapUiLargeMarginBegin"
+                                          width="30%"
+                                          items="{
+										path: 'Coins>/currencies'
+
+									}"
+                                          selectedKey="Bitcoin"
+                                          change="computeVolatility"
+                                >
+                                    <core:ListItem key="{Coins>Name}" text="{Coins>Name}" additionalText="{Coins>Symbol}"/>
+                                </ComboBox>
+
+                            </VBox>
+                            <VBox   class="sapUiSmallMargin" backgroundDesign="Translucent">
+                                <Label class="sapUiMediumMargin" text="Volatile Against"/>
+                                <ComboBox   id="toCC"
+                                            showSecondaryValues= "true"
+                                            filterSecondaryValues="true"
+                                            class="phonemin sapUiLargeMarginBegin"
+                                            width="30%"
+                                            items="{
+										path: 'Coins>/currencies'
+
+									}"
+                                            selectedKey="Dollar"
+                                            change="computeVolatility">
+                                    <core:ListItem key="{Coins>Name}" text="{Coins>Name}" additionalText="{Coins>Symbol}"/>
+                                </ComboBox>
+
+                            </VBox>
+
+                        </HBox>
+                        <VBox justifyContent="Center" alignItems="Center">
+                            <MessageStrip visible="false" id="vError" showIcon="true"  class="sapUiMediumMarginBegin sapUiMediumMarginTop"  text="Make a valid selection to update estimated volatility" type="Error"/>
+                            <VBox>
+                                <Text wrapping="true" class="sapUiMediumMarginBegin sapUiSmallMarginTop " text="&#8226; Daily Volatility of {volatility>/from} against {volatility>/against}  is estimated to {volatility>/daily}%"/>
+                                <Text wrapping="true" class="sapUiMediumMarginBegin" text="&#8226; 30 days volatility of {volatility>/from} against {volatility>/against}  is estimated to {volatility>/30days}%"/>
+                                <Text wrapping="true" class="sapUiMediumMarginBegin" text="&#8226; 60 days volatility of {volatility>/from} against {volatility>/against}  is estimated to {volatility>/60days}%"/>
+                                <Text wrapping="true" class="sapUiMediumMarginBegin" text="&#8226; 120 days volatility of {volatility>/from} against {volatility>/against}  is estimated to {volatility>/120days}%"/>
+                                <Text wrapping="true" class="sapUiMediumMarginBegin" text="&#8226; One year volatility of {volatility>/from} against {volatility>/against} is estimated to {volatility>/oneYear}%"/>
+                            </VBox>
+                        </VBox>
+                    </VBox>
+
+                    <VBox class="sapUiLargeMarginTop phonemin2" width="40%">
+                        <VBox class="sapUiLargeMarginTop" alignItems="Start">
+                            <Text class="titleNormalSize" text="What is volatility and why does it matter?" />
+                        </VBox>
+                        <Text wrapping="true"  class="textNormalSize sapUiMediumMarginTop" text=" &#8195; Volatility is a measure of how much the price of an asset varies over time. Volatility refers to the amount of uncertainty or risk about the size of changes in a financial asset's value. A higher volatility means that the price of the asset can change dramatically over a short time period in either direction. A lower volatility means that a financial asset's value does not fluctuate dramatically, but changes in value at a steady pace over a period of time." />
+
+                        <VBox class="sapUiLargeMarginTop"  alignItems="Start">
+                            <Text class="titleNormalSize" text="How we calculate volatility?" />
+                        </VBox>
+                        <Text wrapping="true"  class="textNormalSize sapUiMediumMarginTop" text=" &#8195; It uses the standard deviation of the daily close price for the preceding 30-, 60-, 120- and (one year)365-day windows. Daily volatility is calculated based on minute fluctuations and the rest based on daily fluctuations. These are measures of historical volatility based on past selected currency prices. Historical volatility refers to the volatility of a financial instrument over a specified period but with the last observation on a date in the past." />
+
+                        <VBox class="sapUiLargeMarginTop"  alignItems="Start">
+                            <Text class="titleNormalSize" text="Historical volatility?" />
+                        </VBox>
+                        <Text wrapping="true"  class="textNormalSize sapUiMediumMarginTop" text=" &#8195; For current markets, historical volatility measures how far the current trading prices fluctuate from some central point median, or the moving average, price. That is how a strongly trending market will have reduced volatility even though prices may change dramatically over time, which is a very common trend with Bitcoin and some other cryptocurrencies." />
+
+
+                        <VBox class="sapUiLargeMarginTop"  alignItems="Start">
+                            <Text class="titleNormalSize" text="Which sources are used by this website?" />
+                        </VBox>
+                        <Text wrapping="true"  class="textNormalSize sapUiMediumMarginTop" text=" &#8195; Sonif used the CryptoCompare API for querying historical crypto currencies data used in the volatility calculation. Furthermore, it uses the API for querying the opening price for the listed currencies in the first combo box." />
+
+                    </VBox>
+                </VBox>
+            </content>
+            <FlexBox width="auto" height="15rem" backgroundDesign="Transparent"/>
+        </Panel>
+
+        <mvc:XMLView viewName="sap.ui.Odata.webapp.view.Footer" />
+
+    </Page>
+
+</mvc:View>

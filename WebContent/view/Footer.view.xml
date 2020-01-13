@@ -1,0 +1,58 @@
+<core:View  class="footer"  xmlns:core="sap.ui.core"
+           xmlns="sap.m" controllerName="sap.ui.Odata.webapp.controller.Footer" >
+    <VBox  backgroundDesign="Translucent">
+
+        <HBox  width="auto"  wrap="Wrap"
+              justifyContent="Start">
+            <VBox class="sapUiLargeMargin ">
+                <Text class="sonifFooter" text="@ 2019 SONIF"/>
+                <Text wrapping="true" class="textNormalSize" text="Become a trading master &#10; with Sonif"/>
+            </VBox>
+            <VBox class="sapUiMediumMargin ">
+                <GenericTile class="" header="{i18n>reviews}"
+                             mode="LineMode" press="navigateTo('reviews')" />
+                <FlexBox class="sapUiSmallMarginTop">
+                     <GenericTile header="{i18n>guide}"
+                             mode="LineMode" press="navigateTo('guide')" />
+                </FlexBox>
+            </VBox>
+            <VBox  class="sapUiMediumMargin ">
+                <GenericTile class="" header="{i18n>forum}"
+                             mode="LineMode" press="navigateTo('forum')" />
+                <FlexBox class="sapUiSmallMarginTop">
+                <GenericTile  header="{i18n>contributors}"
+                             mode="LineMode" press="navigateTo('about')" />
+                </FlexBox>
+
+            </VBox>
+            <VBox class="sapUiMediumMargin" >
+                <GenericTile class="" header="{i18n>faq}"
+                             mode="LineMode" press="navigateTo('faq')" />
+                <FlexBox class="sapUiSmallMarginTop">
+                    <GenericTile    header="{i18n>settings}"
+                             mode="LineMode" press="navigateTo('settings')" />
+                </FlexBox>
+            </VBox>
+            <VBox class="sapUiMediumMargin" >
+                <GenericTile class="" header="{i18n>contact}"
+                             mode="LineMode" press="navigateTo('contact')" />
+                <FlexBox class="sapUiSmallMarginTop">
+                    <GenericTile    header="{i18n>donate}"
+                                    mode="LineMode" press="navigateTo('donate')" />
+                </FlexBox>
+            </VBox>
+
+<!--        todo knowledge Base-->
+        </HBox>
+
+        <FlexBox class="sapUiMediumMarginBegin">
+            <Button
+                    type="Emphasized"
+                    icon="sap-icon://sap-ui5"
+                    text="{i18n>ui5}"
+                    press="onPoweredBy"
+                    class=""/>
+        </FlexBox>
+    </VBox>
+
+</core:View>

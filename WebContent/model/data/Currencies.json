@@ -1,0 +1,116 @@
+{
+"currencies":
+[
+    {
+    "Name": "Cardano",
+    "Symbol": "ADA"
+    },
+    {
+    "Name": "Bitcoin CASH",
+    "Symbol": "BCH"
+    },
+    {
+    "Name": "Binance Coin",
+    "Symbol": "BNB"
+    },
+    {
+    "Name": "Bitcoin",
+    "Symbol": "BTC"
+    },
+    {
+    "Name": "Bitcoin Gold",
+    "Symbol": "BTG"
+    },
+    {
+    "Name": "Dash",
+    "Symbol": "DASH"
+    },
+    {
+    "Name": "Decred",
+    "Symbol": "DCR"
+    },
+    {
+    "Name": "Eos",
+    "Symbol": "EOS"
+    },
+    {
+    "Name": "Ethereum Clasic",
+    "Symbol": "ETC"
+    },
+    {
+    "Name": "Ethereum",
+    "Symbol": "ETH"
+    },
+    {
+    "Name": "Euro",
+    "Symbol": "EUR"
+    },
+    {
+    "Name": "Iota",
+    "Symbol": "MIOTA"
+    },
+    {
+    "Name": "Litecoin",
+    "Symbol": "LTC"
+    },
+    {
+    "Name": "Neo",
+    "Symbol": "NEO"
+    },
+    {
+    "Name": "Omise GO",
+    "Symbol": "OMG"
+    },
+    {
+    "Name": "Qtum",
+    "Symbol": "QTUM"
+    },
+    {
+    "Name": "Tron",
+    "Symbol": "TRX"
+    },
+    {
+    "Name": "Dollar",
+    "Symbol": "USD"
+    },
+    {
+    "Name": "Tether",
+    "Symbol": "USDT"
+    },
+    {
+    "Name": "Nem",
+    "Symbol": "XMR"
+    },
+    {
+    "Name": "Stellar",
+    "Symbol": "XLM"
+    },
+    {
+    "Name": "Monero",
+    "Symbol": "XMR"
+    },
+    {
+    "Name": "Ripple",
+    "Symbol": "XRP"
+    },
+    {
+    "Name": "Tezos",
+    "Symbol": "XTZ"
+    },
+    {
+    "Name": "Z Cash",
+    "Symbol": "ZEC"
+    },
+    {
+    "Name": "0X",
+    "Symbol": "ZRX"
+    }
+
+
+]
+}
+
+
+
+
+

@@ -1,0 +1,6 @@
+<mvc:View
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns="sap.m"
+	displayBlock="true" controllerName="sap.ui.Odata.webapp.controller.App">
+	<App  id="SonifApp"/>
+</mvc:View>

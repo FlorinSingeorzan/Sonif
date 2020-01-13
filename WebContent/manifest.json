@@ -1,0 +1,326 @@
+{
+	"_version": "1.1.0",
+	"sap.app": {
+		"_version": "1.1.0",
+		"id": "sap.ui.Odata.webapp",
+		"type": "application",
+		"i18n": "i18n/i18n.properties",
+		"applicationVersion": {
+			"version": "1.0.0"
+		},
+		"dataSources": {
+			"Test": {
+
+				"uri": "proxy/http/evo01787.evosoft.com:8010/sap/opu/odata/sap/ZFS_SONIF_SRV/",
+				"type": "OData",
+				"settings": {
+					"odataVersion": "2.0",
+					"localUri": "proxy/http/evo01787.evosoft.com:8010/sap/opu/odata/sap/ZFS_SONIF_SRV/",
+					"useBatch": false
+				}
+			},
+			"User": {
+				"uri": "evo01787.evosoft.com:8010/sap/opu/odata/SAP/ZFS_SONIF_SRV/UserSet",
+				"type": "OData",
+				"settings": {
+					"odataVersion": "2.0",
+					"localUri": "evo01787.evosoft.com:8010/sap/opu/odata/SAP/ZFS_SONIF_SRV/UserSet"
+				}
+			}
+		},
+		"title": "{{title}}",
+		"description": "{{appDescription}}",
+		"resources": "resources.json",
+		"ach": "ach"
+	},
+	"sap.ui": {
+
+		"technology": "UI5",
+		"icons": {
+			"icon": "images/favicon.ico",
+			"favIcon": "images/favicon.ico",
+			"phone": "images/favicon.ico",
+			"phone@2": "images/favicon.ico",
+			"tablet": "images/favicon.ico",
+			"tablet@2": "images/favicon.ico"
+		},
+		"deviceTypes": {
+			"desktop": true,
+			"tablet": true,
+			"phone": true
+		},
+		"supportedThemes": [
+			"sap_hcb",
+			"sap_hcw",
+			"sap_belize",
+			"sap_belize_plus"
+		]
+	},
+	"sap.ui5": {
+		"rootView": {
+			"viewName": "sap.ui.Odata.webapp.view.App",
+			"type": "XML"
+		},
+		"dependencies": {
+			"minUI5Version": "1.54.0",
+			"libs": {
+				"sap.ui.core": {
+					
+				},
+				"sap.m": {
+					
+				},
+				"sap.ui.layout": {
+					
+				},
+				"sap.ui.commons": {
+					
+				},
+				"sap.suite.ui.commons": {
+
+				},
+				"sap.suite.ui.microchart": {
+					
+				}
+			}
+		},
+		"contentDensities": {
+			"compact": true,
+			"cozy": true
+		},
+		"models": {
+			"i18n": {
+				"type": "sap.ui.model.resource.ResourceModel",
+				"settings": {
+					"bundleName": "sap.ui.Odata.webapp.i18n.i18n"
+				}
+			}
+		},
+		"resources": {
+			"css": [
+				{
+					"uri": "css/style.css"
+				}
+			]
+		},
+		"routing": {
+			"config": {
+				"routerClass": "sap.m.routing.Router",
+				"viewType": "XML",
+				"viewPath": "sap.ui.Odata.webapp.view",
+				"controlId": "SonifApp",
+				"controlAggregation": "pages",
+				"transition": "fade",
+				"bypassed": {
+					"target": "notFound"
+				}
+			},
+			"routes": [
+				{
+					"pattern": "",
+					"name": "home",
+					"target": "startpage"
+				},
+				{
+					"pattern": "mining",
+					"name": "processFlow",
+					"target": "processFlow"
+				},
+				{
+					"pattern": "history",
+					"name": "history",
+					"target": "history"
+				},
+				{
+					"pattern": "reviews",
+					"name": "reviews",
+					"target": "reviews"
+				},
+				{
+					"pattern": "newsFeed",
+					"name": "newsFeed",
+					"target": "newsFeed"
+				},
+				{
+					"pattern": "currency/{currencyId}",
+					"name": "vcoin",
+					"target": "vcoin"
+				},
+				{
+					"pattern": "converter",
+					"name": "converter",
+					"target": "converter"
+				},
+				{
+					"pattern": "faq",
+					"name": "faq",
+					"target": "faq"
+				},
+				{
+					"pattern": "about",
+					"name": "about",
+					"target": "about"
+				},
+				{
+					"pattern": "vcurrency",
+					"name": "vcurrency",
+					"target": "vcurrency"
+				},
+				{
+					"pattern": "CurrencyDetails/{currencyId}",
+					"name": "cdetail",
+					"target": "cdetail"
+				},
+				{
+					"pattern": "wallet",
+					"name": "wallet",
+					"target": "wallet"
+				},
+				{
+					"pattern": "watchlist",
+					"name": "watchlist",
+					"target": "watchlist"
+				},
+				{
+					"pattern": "notFound",
+					"name": "notFound",
+					"target": "notFound"
+				},
+				{
+					"pattern": "forum",
+					"name": "forum",
+					"target": "forum"
+				},
+				{
+					"pattern": "som",
+					"name": "som",
+					"target": "som"
+				},
+				{
+					"pattern": "guide",
+					"name": "guide",
+					"target": "guide"
+				},
+				{
+					"pattern": "summary",
+					"name": "summary",
+					"target": "summary"
+				},
+				{
+					"pattern": "settings",
+					"name": "settings",
+					"target": "settings"
+				},
+				{
+					"pattern": "contact",
+					"name": "contact",
+					"target": "contact"
+				},
+				{
+					"pattern": "donate",
+					"name": "donate",
+					"target": "donate"
+				},
+				{
+					"pattern": "volatility",
+					"name": "volatility",
+					"target": "volatility"
+				}
+
+			],
+			"targets": {
+				"startpage": {
+					"viewName": "Startpage",
+					"viewLevel": 0
+				},
+				"processFlow": {
+					"viewName": "Mining",
+					"viewLevel": 1
+				},
+				"history": {
+					"viewName": "History",
+					"viewLevel": 1
+				},
+				"reviews": {
+					"viewName": "Reviews",
+					"viewLevel": 1
+				},
+				"newsFeed": {
+					"viewName": "NewsFeed",
+					"viewLevel": 1
+				},
+				"vcoin": {
+					"viewId": "vcoin",
+					"viewName": "Detail",
+					"viewLevel": 2
+				},
+				"notFound": {
+					"viewId": "notFound",
+					"viewName": "NotFound",
+					"transition": "show"
+				},
+				"converter": {
+					"viewId": "converter",
+					"viewName": "Converter"
+				},
+				"faq": {
+					"viewId": "faq",
+					"viewName": "Faq"
+				},
+				"about": {
+					"viewId": "about",
+					"viewName": "About"
+				},
+				"vcurrency": {
+					"viewId": "vcurrency",
+					"viewName": "VCurrency"
+				},
+				"cdetail": {
+					"viewId": "cdetail",
+					"viewName": "CryptoDetail"
+				},
+				"wallet": {
+					"viewId": "wallet",
+					"viewName": "Wallet"
+				},
+				"watchlist": {
+					"viewId": "watchlist",
+					"viewName": "Watchlist"
+				},
+				"forum": {
+					"viewId": "forum",
+					"viewName": "Forum"
+				},
+				"som": {
+					"viewId": "som",
+					"viewName": "Som"
+				},
+				"guide": {
+					"viewId": "guide",
+					"viewName": "Guide"
+				},
+				"summary": {
+					"viewId": "summary",
+					"viewName": "Summary"
+				},
+				"settings": {
+					"viewId": "settings",
+					"viewName": "Settings"
+				},
+				"contact": {
+					"viewId": "contact",
+					"viewName": "Contact"
+				},
+				"donate": {
+					"viewId": "donate",
+					"viewName": "Donate"
+				},
+				"volatility": {
+					"viewId": "volatility",
+					"viewName": "Volatility"
+				}
+
+			}
+		}
+	}
+}

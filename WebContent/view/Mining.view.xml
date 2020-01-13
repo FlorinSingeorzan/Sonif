@@ -1,0 +1,102 @@
+<mvc:View height="100%"
+          xmlns="sap.m"
+          xmlns:core="sap.ui.core"
+          xmlns:mvc="sap.ui.core.mvc"
+          xmlns:suite="sap.suite.ui.commons"
+          xmlns:l="sap.ui.layout"
+          controllerName="sap.ui.Odata.webapp.controller.Mining"
+          xmlns:viz="sap.viz.ui5.controls"
+          class="whiteBackground"
+>
+	<Page class="sapUiContentPadding" showHeader="false">
+        <mvc:XMLView viewName="sap.ui.Odata.webapp.view.Toolbar" />
+        <content>
+            <viz:Popover id="popOver" />
+            <l:Grid defaultSpan="L12 M12 S12"
+                    position="Center" vSpacing="0" hSpacing="5">
+                <suite:ChartContainer showSelectionDetails="true"
+                                      autoAdjustHeight="false">
+                    <suite:ChartContainerContent icon="sap-icon://workflow-tasks"
+                                                 title="Mining Flow">
+                        <suite:content >
+                            <FlexBox justifyContent="Center"   class="miningDiv"   wrap="Wrap" alignItems="Center"  >
+                                <Image class="responsive" src="images/ProcessFlowImageContent/all.png"  />
+                            </FlexBox>
+                        </suite:content>
+                    </suite:ChartContainerContent>
+
+                    <suite:ChartContainerContent icon="sap-icon://newspaper"
+                                                 title="Mining News">
+                        <suite:content >
+                            <List id="newsFeed"  headerText="Mining related news"  items="{path:'news>/Data', templateShareable:true}" growing="true" growingDirection="Downwards"  growingThreshold="10" growingScrollToLoad="true">
+                                <FeedListItem  sender="{news>title}"
+                                               icon="{news>imageurl}"    iconPress=".onOriginalPostPage(${news>url})" senderPress=".onOriginalPostPage(${news>url})"
+                                               iconDensityAware="false" info="{news>source}"
+                                               timestamp="{
+                                                        path: 'news>published_on',
+                                                        formatter: '.formatJSONDate',
+                                                        templateShareable:true
+                                                        }"
+                                               text="{news>body}" convertLinksToAnchorTags="All">
+                                </FeedListItem>
+                            </List>
+
+                        </suite:content>
+                    </suite:ChartContainerContent>
+                    <suite:ChartContainerContent icon="sap-icon://line-chart"
+                                                 title="{i18n>miningHashRate}">
+
+                        <suite:content>
+                            <VBox>
+                                <VBox alignItems="Center">
+                                <HBox wrap="Wrap" class="sapUiLargeMargin">
+                                    <ComboBox placeholder="Select Currency" showSecondaryValues= "true"
+                                              class="sapUiMediumMargin"
+                                              change="statisticalSelect"
+                                              filterSecondaryValues="true"
+                                              textAlign="Center"
+                                              id="statisticalType"
+                                    >
+                                        <items>
+                                            <core:ListItem key="hash-rate" text="Hash Rate" />
+                                            <core:ListItem key="difficulty" text="Difficulty" />
+                                            <core:ListItem key="miners-revenue" text="Mining Revenue" />
+                                            <core:ListItem key="transaction-fees" text="Total Transaction Fees(BTC)" />
+                                            <core:ListItem key="transaction-fees-usd" text="Total Transaction Fees(USD)" />
+                                            <core:ListItem key="cost-per-transaction-percent" text="Cost % of Transaction Volume)" />
+                                            <core:ListItem key="cost-per-transaction" text="Cost per Transaction" />
+                                        </items>
+                                    </ComboBox>
+                                    <Input liveChange="verifyPeriod" textAlign="Center"  id="sPeriod" type="Number" placeholder="Enter Period (max 2000 days)"   class="phonemin sapUiMediumMargin" width="80%"/>
+                                    <HBox wrap="NoWrap">
+                                        <CheckBox id="sAllData" select="allHistoryData" class="sapUiMediumMarginTop" wrapping="true" text="All Historical values" width="100%"/>
+                                        <Button class="sapUiMediumMargin" text="Get" press="getStatisticalData" />
+                                    </HBox>
+                                </HBox>
+                                <Text class="textBigSize" text="{statisticalData>/description}"/>
+
+                                </VBox>
+                                <core:Fragment  fragmentName="sap.ui.Odata.webapp.fragment.MiningStatistics"
+                                           type="JS" />
+
+
+                            </VBox>
+                        </suite:content>
+                    </suite:ChartContainerContent>
+
+
+<!--                    <suite:ChartContainerContent icon="sap-icon://workflow-tasks"-->
+<!--                                                 title="Difficulty">-->
+<!--                        <suite:content >-->
+<!--                            <FlexBox justifyContent="Center"   class="miningDiv"   wrap="Wrap" alignItems="Center"  >-->
+<!--                                <Image class="responsive" src="images/ProcessFlowImageContent/all.png"  />-->
+<!--                            </FlexBox>-->
+<!--                        </suite:content>-->
+<!--                    </suite:ChartContainerContent>-->
+                </suite:ChartContainer>
+            </l:Grid>
+            <mvc:XMLView  viewName="sap.ui.Odata.webapp.view.Footer" />
+        </content>
+	</Page>
+
+</mvc:View>

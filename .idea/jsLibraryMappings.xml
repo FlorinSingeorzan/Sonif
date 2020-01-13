@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="JavaScriptLibraryMappings">
+    <file url="PROJECT" libraries="{Ui5 core, sap-ui-core, sap.ui.core.mvc, tf}" />
+    <includedPredefinedLibrary name="Node.js Core" />
+  </component>
+</project>

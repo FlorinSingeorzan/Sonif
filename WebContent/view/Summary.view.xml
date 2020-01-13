@@ -1,0 +1,49 @@
+<mvc:View controllerName="sap.ui.Odata.webapp.controller.Summary"
+          xmlns:mvc="sap.ui.core.mvc"
+          xmlns="sap.m"
+          xmlns:core="sap.ui.core"
+          class="whiteBackground">
+        <mvc:XMLView viewName="sap.ui.Odata.webapp.view.Toolbar" />
+    <SplitContainer id="SplitContDemo" initialDetail="detail" initialMaster="master">
+        <masterPages>
+            <Page  id="master" title="Select Summary For" icon="sap-icon://action" class="sapUiStdPage ">
+                <customHeader >
+
+                </customHeader>
+                <content>
+
+                    <ComboBox placeholder="Select Currency" id="sCurrencyType" showSecondaryValues= "true"
+                              filterSecondaryValues="true"
+                              textAlign="Center"
+                              width="100%"
+                              items="{
+										path: 'Coins>/currencies'
+									}">
+                        <core:ListItem key="{Coins>Name}" text="{Coins>Name}" additionalText="{Coins>Symbol}"/>
+                    </ComboBox>
+                    <List  >
+                        <items>
+                            <StandardListItem icon="sap-icon://history" title="History" type="Active" press="addDetailContent('v3/coin/chart','s=USD,CNY,EUR,GBP,'+${settings>/BaseExchange})"/>
+                            <StandardListItem icon="sap-icon://line-charts" title="Progress &#38; News" type="Active" press="addDetailContent('v1/coin/feed', '='+${settings>/BaseExchange})"/>
+                            <StandardListItem icon="sap-icon://horizontal-bar-chart-2" title="Actual Metrics" type="Active" press="addDetailContent('v1/coin/summary', 's=USD,CNY,EUR,GBP,'+${settings>/BaseExchange})"/>
+                            <StandardListItem icon="sap-icon://capital-projects" title="Cryptocurrency Worth" type="Active" press="addDetailContent('v1/coin/tiles', 's=USD,EUR,CNY,GBP,RON,GOLD,JPY,RUB,SGD,KRW,PLN,HUF,AUD,CAD,ZAR,SEK,AED,DKK,MXN,VEF,'+${settings>/BaseExchange})"/>
+                            <StandardListItem icon="sap-icon://appointment-2" title="Week Evolution" type="Active" press="addDetailContent('v1/coin/histo_week', '='+${settings>/BaseExchange})"/>
+                        </items>
+                    </List>
+                </content>
+            </Page>
+        </masterPages>
+        <detailPages>
+            <Page  id="detail" title="Details" class="sapUiStdPage">
+                <content>
+                    <FlexBox id="sum" xmlns:html="http://www.w3.org/1999/xhtml"
+                             direction="Column" justifyContent="Center" width="auto" height="auto">
+                        <html:script id="summ" name="summary" src="controller/summary.js" type="application/javascript"/>
+                    </FlexBox>
+                </content>
+            </Page>
+        </detailPages>
+
+    </SplitContainer>
+
+</mvc:View>

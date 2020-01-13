@@ -1,0 +1,130 @@
+<mvc:View
+        xmlns="sap.m"
+        xmlns:mvc="sap.ui.core.mvc"
+        xmlns:suite="sap.suite.ui.commons"
+        controllerName="sap.ui.Odata.webapp.controller.Forum"
+        class="whiteBackground">
+    <Page
+            showHeader="false"
+            backgroundDesign="Transparent">
+        <mvc:XMLView viewName="sap.ui.Odata.webapp.view.Toolbar" />
+        <FlexBox  class="fade_line mid sapUiLargeMarginTop"/>
+
+        <suite:Timeline
+
+                id="forum"
+                enableScroll="false"
+                enableDoubleSided="false"
+                growing="false"
+                groupBy="dateTime"
+                lazyLoading="true"
+                enableSocial="false"
+                textHeight="2px"
+                showHeaderBar="false"
+                width="100%"
+                noDataText="{i18n>loading}">
+
+            <suite:TimelineItem
+
+                    dateTime="{
+					path: 'ReviewDate'
+
+				}"
+                    status="Information"
+                    icon="sap-icon://person-placeholder"
+                    title="{=!${Template} ? ${UserName} : null}">
+
+                <suite:embeddedControl>
+
+                    <VBox>
+                        <Title class="sapUiTinyMarginBegin"  text="Add a Comment"/>
+                        <Input id="nickname"
+                               visible="{Template}"
+                               value="{settings>/Nickname}"
+                               placeholder="Nickname (max: 20 characters)"/>
+                        <TextArea id="comment"
+                                  growing="false"
+                                  height="200px"
+                                  width="100%"
+                                  visible="{Template}"
+                                  placeholder="Say your opinion (max: 1000 characters)"
+                                  valueLiveUpdate="true" />
+                        <HBox>
+                            <Button
+                                visible="{Template}"
+                                text="Submit"
+                                press="addComment" />
+                            <Text text="{i18n>commentSafeSuggest}" class="sapUiSmallMargin"/>
+                        </HBox>
+                    </VBox>
+                </suite:embeddedControl>
+            </suite:TimelineItem>
+        </suite:Timeline>
+
+        <Title class="sapUiLargeMarginBegin"  text="Discussions"/>
+        <suite:Timeline
+                id="discussions"
+                enableScroll="false"
+                enableDoubleSided="false"
+                growing="true"
+                groupBy="dateTime"
+                lazyLoading="true"
+                content="{forumDiscussion>/data}"
+                enableSocial="true"
+                sortOldestFirst="false"
+                textHeight="2px"
+                showHeaderBar="false"
+                width="100%"
+                noDataText="{i18n>loading}">
+
+
+            <suite:TimelineItem
+
+                    dateTime="{forumDiscussion>Date}"
+                    status="Information"
+                    icon="sap-icon://comment"
+                    title="{forumDiscussion>Name}">
+
+                <suite:embeddedControl>
+
+                    <VBox>
+                        <VBox visible="{=${forumDiscussion>ReplyEntry}}" class="replyBox">
+                            <FlexBox>
+                                <MessageStrip showIcon="true" customIcon="sap-icon://discussion"   text="{forumDiscussion>ReplyName} said:"/>
+                            </FlexBox>
+                                <!--<MessageStrip customIcon="sap-icon://discussion" visible="{=!${Template}}"  showIcon="true" class="sapUiMediumMarginBegin " text="We provide a wallet with full functionality to fulfill all your needs. You obtained a wallet address and you can perform transaction and exchanges."/>-->
+                            <List visible="{=${forumDiscussion>ReplyEntry}}">
+                                <FeedListItem   showIcon="false" maxCharacters="200"  text="{forumDiscussion>ReplyText}" class="sapUiTinyMarginBegin " />
+                            </List>
+
+                        </VBox>
+                        <List >
+                            <FeedListItem  showIcon="false" maxCharacters="300"  text="{forumDiscussion>Text}" class="sapUiTinyMarginBegin " />
+                        </List >
+                        <VBox class = "noReplyBox" width="90px" visible="{=(${forumDiscussion>NoReply}>0)}">
+                        <MessageStrip class="sapUiNoMargin noReplyBox" text="{forumDiscussion>NoReply} reply"/>
+                        </VBox>
+                    </VBox>
+                </suite:embeddedControl>
+                <suite:customReply id="{forumDiscussion>Id}">
+                    <Popover id="replyPopover" title="Add a reply to {forumDiscussion>Name} comment ">
+                        <Input id="replyName"
+                               value="{settings>/Nickname}"
+                                placeholder="Nickname (max: 20 characters)"/>
+                        <TextArea id="replyText"
+
+                                  growing="false"
+                                  height="200px"
+                                  width="100%"
+
+                                  placeholder="{i18n>replyBodySuggest}"
+                                  valueLiveUpdate="true" />
+                        <FlexBox width="100%" justifyContent="End">
+                            <Button class="sapUiSmallMarginEnd" type="Emphasized" text="Reply" press="addReplyOn($event,${forumDiscussion>Id})"/>
+                        </FlexBox>
+                    </Popover>
+                </suite:customReply>
+            </suite:TimelineItem>
+        </suite:Timeline>
+    </Page>
+</mvc:View>

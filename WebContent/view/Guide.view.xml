@@ -1,0 +1,75 @@
+<core:View xmlns:core="sap.ui.core"
+           xmlns:mvc="sap.ui.core.mvc"
+           xmlns="sap.m"
+           class="whiteBackground"
+>
+
+    <mvc:XMLView viewName="sap.ui.Odata.webapp.view.Toolbar" />
+    <Page showHeader="false" backgroundDesign="Transparent">
+        <content>
+            <FlexBox  class="fade_line mid sapUiLargeMarginTop"/>
+            <FlexBox class="sapUiLargeMarginTop" alignContent="Center" justifyContent="Center">
+                <Title class="textBigSize" text="Platform Guide"/>
+            </FlexBox>
+            <Panel expandable="true" expanded="false" headerText="Transaction" width="auto" class="sapUiResponsiveMargin">
+                <content>
+                    <VBox backgroundDesign="Solid" >
+                        <Text text="To make a transaction you have to go to your Wallet page and select the Transaction tab. To complete the transaction you have to go through the wizard steps. First you have to select the type of transaction. You can choose either exchange or transfer. The rest of the steps depends on the type of transaction:"/>
+                        <Text text="For Exchange you have to consider changing one type of currency into another. You have to select the currency type that you want to exchange ant the amount. The amount input can appear in read in the following cases: you have introduced a negative value, you don't have the amount that you declared or the type is incorrect. A check box is present and if selected the total amount of the selected currency is appended in input.
+                        In the next step you have to select the cryptocurrrency that you want to obtain in the exchange. You can choose a type and in the input next to it a approximation of the amount is show. The next steps is the same for the transfer"/>
+                        <Text text="For Transfer you can send some currency to an address.You have to select the currency type that you want to exchange ant the amount. The amount input can appear in read in the following cases: you have introduced a negative value, you don't have the amount that you declared or the type is incorrect. A check box is present and if selected the total amount of the selected currency is appended in input.
+                        In the next step you have to introduce the transfer address. The address must be a valid one. If the address is to short or doesn't have a wallet associated in application then on the next step a message indicated a wrong address is shown."/>
+                        <Text text="A review step is presented where you can see the action that you are about to made. If you press Cancel than the date is canceled and you are redirected to the first step. If you press Generate Transaction the final step is presented "/>
+                        <Text text="The final step present again a review of the transaction. An input is presented that require the private key of the wallet. You can either choose to cancel or to complete the transaction. If you choose to finalize it a backend job will validate the data and will complete or reject your request. You will be redirected to the first step for other transaction and a log will inform if the transaction is completed or invalidated." />
+
+                    </VBox>
+                </content>
+            </Panel>
+            <Panel expandable="true" expanded="false" headerText="News Feed" width="auto" class="sapUiResponsiveMargin">
+                <content>
+                    <VBox backgroundDesign="Solid" >
+                        <Text text="You can read news in the news feed section. A page with two tabs appear if you choose the feed section. On the first tab a list of the most recent news is presented. The toolbar contain two buttons. The first button represent the categories and if it is pressed a list of categories will appear on the left side of the page."/>
+                        <Text text="From the list you can choose the interest categories. After that you have to press the save button to save the categories selection. Based on this categories a new order in the list will be presented. In the second tab a map of the SOM is presented. Related categories will be mapped close in the matrix result."/>
+                    </VBox>
+                </content>
+            </Panel>
+            <Panel expandable="true" expanded="false" headerText="Watchlist" width="auto" class="sapUiResponsiveMargin">
+                <content>
+                    <VBox backgroundDesign="Solid" >
+                        <Text text="The watchlist page let you select preferred coins. In the list some basic info about currencies are shown (value, symbol, change, graph). A combo box appear in the top of the page. You can choose the interested currencies and a record will be appended on the list. " />
+                        <Text text="To remove a currency from list you can press the x from the last column. The list will be automatically updated and the currency will be removed."/>
+                    </VBox>
+                </content>
+            </Panel>
+
+            <Panel expandable="true" expanded="false" headerText="Cryptocurrency" width="auto" class="sapUiResponsiveMargin">
+                <content>
+                    <VBox backgroundDesign="Solid" >
+                        <Text text="In the Cryptocurrency section you can view the basic info about currencies. A graph of the progress is shown and some basic info are presented. The graph can be refreshed or if the details button is pressed another page will appear. "/>
+                        <Text text="On the detail page a lot of the information about the selected currency will be present. A graph of the value will appear in the top section of the page with the following: value, maxim value, minimum value, open value of the last 24 hours, minimum and maximum for 24 hours"/>
+                    </VBox>
+                </content>
+            </Panel>
+
+            <Panel expandable="true" expanded="false" headerText="Converter" width="auto" class="sapUiResponsiveMargin">
+                <content>
+                    <VBox backgroundDesign="Solid" >
+                        <Text  text="A conversion page is presented on the page with the same name. Conversion between permitted coins can be made by selecting the two currency types and the amount for conversion. The conversion will be ready after all the data is provided, until then a text with No Valid Selection or No Selection will appear." />
+                        <Text text="Fast conversion will appear if you select the arrow on the left side near the title. You can convert while typing in 5 different currency only by entering the amount of conversion in one of the input."/>
+                    </VBox>
+                </content>
+            </Panel>
+            <Panel expandable="true" expanded="false" headerText="Bitcoin Progress" width="auto" class="sapUiResponsiveMargin">
+                <content>
+                    <VBox backgroundDesign="Solid" >
+                       <Text text="In the section information about the progress of the Cryptocurrency can be found. In the first tab the progress of the last week can be found. On all graphs if a value is choose, in the top toolbar details can be viewed. In the second tap last month is presented. In the last two appear information about last year and all time Bitcoin progress." />
+                       <Text text="In tha last tab, a table with all time progress of the Bitcoin is presented. In the two columns appear the day and the value for that day. The value is formatted to 4 digits." />
+                    </VBox>
+                </content>
+            </Panel>
+
+            <mvc:XMLView viewName="sap.ui.Odata.webapp.view.Footer" />
+        </content>
+    </Page>
+
+</core:View>

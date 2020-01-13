@@ -1,0 +1,66 @@
+<mvc:View
+	xmlns="sap.m"
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns:suite="sap.suite.ui.commons"
+	controllerName="sap.ui.Odata.webapp.controller.Reviews"
+	class="whiteBackground">
+	<Page
+		showHeader="false"
+		backgroundDesign="Transparent">
+		<mvc:XMLView viewName="sap.ui.Odata.webapp.view.Toolbar" />
+		<FlexBox  class="fade_line mid sapUiLargeMarginTop"/>
+		<suite:Timeline
+			enableSocial="false"
+			id="timeline"
+			enableDoubleSided="true"
+			growing="false"
+			groupBy="dateTime"
+			lazyLoading="true"
+			content="{path : '/ReviewsSet'}"
+			textHeight="automatic"
+			showHeaderBar="false"
+			width="80%"
+			noDataText="{i18n>loading}">
+
+			<suite:TimelineItem
+				dateTime="{parts:[
+								{path: 'Template' },
+								{path: 'ReviewDate' },
+								{path: 'Time' }
+							], formatter:'.formatDate'}"
+				title="{=!${Template} ? ${UserName} : null}"
+				text="{=!${Template} ? ${Quote} : null}"
+				filterValue="{=!${Template} ? ${Rating} : null}">
+				<suite:embeddedControl>
+					<VBox>
+						<Input id="name"
+							visible="{Template}"
+							placeholder="{i18n>newReviewUserNameHint}" value="{settings>/Nickname}" />
+						<RatingIndicator id="rating"
+							enabled="{Template}"
+							value="{Rating}"
+							maxValue="10"
+							iconSize="1rem"
+							class="sapUiTinyMargin" />
+						<Text
+							text="{Quote}"
+							visible="{=!${Template}}"
+							class="sapUiTinyMargin" />
+						<TextArea id="quote"
+							value="{Quote}"
+							growing="false"
+							height="200px"
+							width="100%"
+							visible="{Template}"
+							placeholder="{i18n>newReviewUserCommentHint}"
+							valueLiveUpdate="true" />
+						<Button
+							visible="{Template}"
+							text="{i18n>newReviewButtonText}"
+							press="addReview" />
+					</VBox>
+				</suite:embeddedControl>
+			</suite:TimelineItem>
+		</suite:Timeline>
+	</Page>
+</mvc:View>

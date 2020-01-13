@@ -1,0 +1,35 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta charset="UTF-8">
+
+    <title>Login</title>
+
+    <script id="sap-ui-bootstrap"
+            src="https://sapui5.hana.ondemand.com/resources/sap-ui-core.js"
+            data-sap-ui-libs="sap.m" data-sap-ui-theme="sap_belize_plus"
+            data-sap-ui-compatVersion="edge"
+            data-sap-ui-resourceroots='{"sap.ui.Odata.webapp": ""}'>
+    </script>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+
+</head>
+
+    <script>
+        sap.ui.getCore().attachInit(function() {
+            sap.ui.require([
+            ], function() {
+                jQuery.sap.setIcons({
+                    favicon: "images/favicon.ico",
+                });
+                this.app = new sap.m.App("Home");
+                this.app.addPage(sap.ui.xmlview("Login", "sap.ui.Odata.webapp.view.Login"));
+                this.app.placeAt("home")
+            });
+        });
+    </script>
+<body class="sapUiBody" id="home">
+</body>
+</html>

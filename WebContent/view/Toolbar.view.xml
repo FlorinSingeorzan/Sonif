@@ -1,0 +1,39 @@
+<core:View xmlns:core="sap.ui.core"
+	xmlns="sap.m" controllerName="sap.ui.Odata.webapp.controller.Toolbar"
+	xmlns:tnt="sap.tnt">
+
+
+	<tnt:ToolHeader  class="toolbar">
+		<Button class="sapUiSmallMarginBegin" icon="images/home.png" type="Transparent" press="navTo('home')">
+			<layoutData>
+				<OverflowToolbarLayoutData priority="NeverOverflow" />
+			</layoutData>
+		</Button>
+		<Button class="toolbarButton"  type="Transparent" text="{i18n>wallet}" press="navTo('wallet')">
+
+
+		</Button>
+		<Button class="toolbarButton"  type="Transparent" text="{i18n>watchlist}" press="navTo('watchlist')" >
+
+
+		</Button>
+		<ToolbarSpacer>
+			<layoutData>
+				<OverflowToolbarLayoutData priority="NeverOverflow" minWidth="16px" />
+			</layoutData>
+		</ToolbarSpacer>
+
+
+		<Button   type="Transparent" text="{i18n>logout}"   press="logout">
+			<layoutData>
+				<OverflowToolbarLayoutData priority="NeverOverflow" />
+			</layoutData>
+
+		</Button>
+
+	</tnt:ToolHeader>
+
+
+
+
+</core:View>

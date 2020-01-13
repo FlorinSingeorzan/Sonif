@@ -1,0 +1,61 @@
+<mvc:View controllerName="sap.ui.Odata.webapp.controller.Login"
+          xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:core="sap.ui.core"  xmlns:html="http://www.w3.org/1999/xhtml">
+
+    <Page class="homeBackground" showHeader="false" >
+<!--        <VBox class="sapUiLargeMargin"  alignContent="Center" justifyContent="Center" alignItems="Center">-->
+<!--            <html:div style="background: white; outline-style: solid; outline-color: gainsboro">-->
+<!--               <VBox  alignContent="Center" justifyContent="Center" alignItems="Center">-->
+<!--                   <html:h1 class="sapUiLargeMargin" >Login</html:h1>-->
+<!--               </VBox>-->
+<!--                   <html:form class="sapUiLargeMargin" method="post" id="loginForm" target="_self" onsubmit="loginUser();return false">-->
+<!--                   <VBox  alignContent="Center" justifyContent="Center" alignItems="Center">-->
+<!--                       <Input class="" name="username" textAlign="Center"  id="username"   placeholder="Username"/>-->
+<!--                       <Input class="sapUiMediumMarginTop" name="password" textAlign="Center" id="password" type="Password"   placeholder="Password"/>-->
+<!--                       <MessageStrip id="invalidMessage" visible="false" showIcon="true" type="Error" text="Invalid username or password"/>-->
+<!--                       <Button   class="sapUiMediumMarginTop" text="Login" />-->
+<!--                   </VBox>-->
+<!--                   </html:form>-->
+<!--            </html:div>-->
+<!--        </VBox>-->
+
+
+        <html:div class="wrapper">
+            <html:div class="loginHeader">
+                <html:button class="cta"><html:i class="fas fa-chevron-down fa-1x"/>Login</html:button>
+                <html:div class="loginForm">
+                    <html:a class="loginText">Login</html:a>
+                    <FlexBox class="fade_line llogin "/>
+
+                    <html:form class="" method="post" id="loginForm" target="_self" onsubmit="loginUser();return false">
+                    <VBox>
+                        <Input class="loginInput sapUiLargeMarginTop" name="username" textAlign="Center"  width="50%"  placeholder="Username"/>
+                        <Input class="loginInput sapUiLargeMarginTop" name="password" textAlign="Center" type="Password" width="50%"   placeholder="Password"/>
+                            <FlexBox class="invalidMsg">
+                                <MessageStrip id="invalidMessage" visible="false" showIcon="true" type="Error" text="Invalid username or password"/>
+                            </FlexBox>
+                        <Button  type="Emphasized"  class="sapUiMediumMarginTop" text="Login" />
+                    </VBox>
+                    </html:form>
+                </html:div>
+            </html:div>
+            <html:div class="loginBody">
+                <html:div class="presentationText">
+                    <html:h1 id="sonifText" class="sonifText ">SONIF</html:h1>
+                    <html:h2 > provide you
+                        <html:div class="slidingVertical">
+                            <html:span >a wallet &#38; transactional tools.</html:span>
+                            <html:span>ICO.</html:span>
+                            <html:span>news aggregator.</html:span>
+                            <html:span>a social environment.</html:span>
+                            <html:span>network statistics.</html:span>
+                        </html:div>
+                    </html:h2>
+                </html:div>
+<!--                <html:h1 style="margin: 0 auto; position: relative; top: 290px" class="sonifText ">SONIF</html:h1>-->
+            </html:div>
+
+        </html:div>
+
+    </Page>
+
+</mvc:View>

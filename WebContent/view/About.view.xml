@@ -1,0 +1,144 @@
+<mvc:View controllerName="sap.ui.Odata.webapp.controller.About"
+	xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" 
+	xmlns:f="sap.ui.layout.form"
+	class="whiteBackground"
+>
+
+	<Page showHeader="false" backgroundDesign="Transparent">
+		<mvc:XMLView viewName="sap.ui.Odata.webapp.view.Toolbar" />
+		<Panel class="sapUiNoContentPadding">
+			<content>
+				<FlexBox height="1rem"/>
+				<VBox fitContainer="true">
+					<FlexBox class="aboutBox1">
+							<VBox>
+							<VBox>
+								<Title wrapping="true" class="titleBigSize whiteText sapUiLargeMargin " text="Become a trading master with Sonif" />
+								<FlexBox class="fade_line"/>
+							</VBox>
+								<HBox  wrap="Wrap" >
+									<FlexBox  class="sapUiLargeMarginTop ">
+										<ImageContent  class="iconAbout sapUiLargeMargin" src="sap-icon://business-one"/>
+									</FlexBox>
+									<FlexBox width="40%" class="phoneWidth sapUiLargeMarginTop">
+										<Text  wrapping="true"  class="sapUiLargeMargin whiteText textBigSize" renderWhitespace="true" text="        We provide tools and support regardless of users level of experience with cryptocurrencies. Here you learn to make your very first transaction or complete smart transaction using our wallet tools as a pro investor. Everyone  will experience an intuitive experience from the start using tools that fit both newcomers and experts. Make easy deposits and withdrawals and learn how to invest depending on market changes.  "/>
+
+									</FlexBox>
+								</HBox>
+							</VBox>
+					</FlexBox>
+					<FlexBox class="aboutBox2">
+						<VBox>
+							<VBox>
+								<Title wrapping="true"  class="titleBigSize whiteText sapUiLargeMargin" text="We continuously improve our tools" />
+								<FlexBox  class="fade_line"/>
+							</VBox>
+							<HBox  wrap="Wrap" justifyContent="End">
+								<FlexBox  class="sapUiLargeMarginTop sapUiLargeMarginEnd">
+									<ImageContent  class="iconAbout sapUiLargeMargin" src="sap-icon://developer-settings"/>
+								</FlexBox>
+								<VBox width="40%" class="phoneWidth sapUiLargeMarginTop">
+									<Text  wrapping="true"  class="sapUiLargeMargin sapUiTinyMarginBottom whiteText textBigSize" renderWhitespace="true" text="        We created tools for transactional, social and informational purpose. All of them are continuously improved and a step away of a free account. We are proud to provide for every Sonif user: "/>
+									<Text  wrapping="true"  class="sapUiLargeMarginBegin sapUiLargeMarginEnd sapUiTinyMarginTop whiteText textBigSize" text=" &#8226; A news aggregator with custom recommendations from 44 sources "/>
+									<Text  wrapping="true"  class="sapUiLargeMarginBegin sapUiLargeMarginEnd sapUiTinyMarginTop whiteText textBigSize" text=" &#8226; Vast statistics about the blockchain network"/>
+									<Text  wrapping="true"  class="sapUiLargeMarginBegin sapUiLargeMarginEnd sapUiTinyMarginTop whiteText textBigSize" text=" &#8226; A secure wallet, a watchlist, a forum, a converter"/>
+									<Text  wrapping="true"  class="sapUiLargeMarginBegin sapUiLargeMarginEnd sapUiTinyMarginTop whiteText textBigSize" text=" &#8226; Historical data and progress graphs"/>
+									<Text  wrapping="true"  class="sapUiLargeMarginBegin sapUiLargeMarginEnd sapUiTinyMarginTop whiteText textBigSize" text=" &#8226; A complex crypto environment for all your needs"/>
+									<Text  wrapping="true"  class="sapUiLargeMarginBegin sapUiLargeMarginEnd sapUiTinyMarginTop whiteText textBigSize" text=" ...and many others. Find them out."/>
+
+								</VBox>
+							</HBox>
+						</VBox>
+					</FlexBox>
+					<FlexBox class="aboutBox1">
+						<VBox>
+							<VBox>
+								<Title wrapping="true" class="titleBigSize whiteText sapUiLargeMargin" text="24/7 Support" />
+								<FlexBox class="fade_line"/>
+							</VBox>
+							<HBox  wrap="Wrap" >
+								<FlexBox  class="sapUiLargeMarginTop ">
+									<ImageContent  class="iconAbout sapUiLargeMargin" src="sap-icon://headset"/>
+								</FlexBox>
+								<VBox width="40%" class="phoneWidth sapUiLargeMarginTop">
+
+										<Text  wrapping="true"  class="sapUiLargeMargin whiteText textBigSize" renderWhitespace="true" text="        No matter what, we're always here for your need. Our Support Center will ensure your questions  are answered and your needs are met in time. Any misunderstanding can be answered by sending us a mail in the support sections   "/>
+										<Link  wrapping="true" href="index.html#/contact"  class="sapUiLargeMarginBegin sapUiLargeMarginEnd sapUiTinyMarginTop  textBigSize" text=" Explore our Support center"/>
+
+								</VBox>
+							</HBox>
+						</VBox>
+					</FlexBox>
+
+					<FlexBox class="aboutBox2">
+						<VBox>
+							<VBox>
+								<Title wrapping="true"  class="titleBigSize whiteText sapUiLargeMargin" text="Learn and earn" />
+								<FlexBox  class="fade_line"/>
+							</VBox>
+							<HBox  wrap="Wrap" justifyContent="End">
+								<FlexBox  class="sapUiLargeMarginTop sapUiLargeMarginEnd">
+									<ImageContent  class="iconAbout sapUiLargeMargin" src="sap-icon://e-learning"/>
+								</FlexBox>
+								<VBox width="40%" class="phoneWidth sapUiLargeMarginTop">
+										<Text  wrapping="true"  class="sapUiLargeMargin sapUiTinyMarginBottom whiteText textBigSize" renderWhitespace="true" text="        Learn from the basic the power of crypto to change the world, how things works and what you can profit from blockchain technology. Get involved and learn to invest smart. Sonif provide documentation and guides about all you need to know."/>
+									<Link  wrapping="true" href="index.html#/faq"  class="sapUiLargeMarginBegin sapUiLargeMarginEnd sapUiTinyMarginTop  textBigSize" text="&#8226; Guide"/>
+									<Link  wrapping="true" href="index.html#/guide"  class="sapUiLargeMarginBegin sapUiLargeMarginEnd sapUiTinyMarginTop  textBigSize" text="&#8226; FAQ"/>
+
+								</VBox>
+							</HBox>
+						</VBox>
+					</FlexBox>
+					<FlexBox class="aboutBox1">
+						<VBox>
+							<VBox>
+								<Title wrapping="true" class="titleBigSize whiteText sapUiLargeMargin" text="Our Technology" />
+								<FlexBox class="fade_line"/>
+							</VBox>
+							<HBox  wrap="Wrap" >
+								<FlexBox  class="sapUiLargeMarginTop ">
+									<ImageContent  class="iconAbout sapUiLargeMargin" src="sap-icon://energy-saving-lightbulb"/>
+								</FlexBox>
+								<VBox width="40%" class="phoneWidth sapUiLargeMarginTop">
+
+									<Text  wrapping="true"  class="sapUiLargeMargin whiteText textBigSize" renderWhitespace="true" text="        We have use powerful developer environments to create a high level of security, smart and intuitive tools and complex services. Abap and SapUi5 are the main technology that we use for database logic respectively user interface design. Combined with a lot of other frameworks and libraries we succeed creating a business suite competitive with other crypto platforms on the market. Working with Google services and CryptoCompare API allow us to deploy one of the most complex trading  environment."/>
+
+								</VBox>
+							</HBox>
+						</VBox>
+					</FlexBox>
+
+					<!--					todo our mission is to-->
+<!--					<f:SimpleForm minWidth="1024"-->
+<!--								  maxContainerCols="2" editable="false" layout="ResponsiveGridLayout"-->
+<!--								  title="Contributor" labelSpanL="4" labelSpanM="4" emptySpanL="0"-->
+<!--								  emptySpanM="0" columnsL="2" columnsM="2">-->
+<!--						<f:content>-->
+<!--							<Title text="Siemens Abap Team Member" />-->
+<!--							<Label text="Name" />-->
+<!--							<Text text="Singeorzan Florin" />-->
+<!--							<Image src="images/florin.jpg" densityAware="false"-->
+<!--								   width="10rem" height="15rem">-->
+<!--								<layoutData>-->
+<!--									<FlexItemData growFactor="1" />-->
+<!--								</layoutData>-->
+<!--							</Image>-->
+<!--							<Label text="Facebook" />-->
+<!--							<Link href="https://www.facebook.com/florin.sangeorzan" text="Florin"/>-->
+<!--							<Label text="Linkedin"/>-->
+<!--							<Link href="https://www.linkedin.com/in/singeorzan-florin-7b0b62142/" text="My profile"/>-->
+<!--							<Label text="Webapp" />-->
+<!--							<Link href="https://appsonif.appspot.com" text="Sonif" emphasized="true"/>-->
+<!--						</f:content>-->
+<!--						<f:layoutData>-->
+<!--							<FlexItemData shrinkFactor="0" backgroundDesign="Solid"-->
+<!--										  styleClass="sapContrastPlus" />-->
+<!--						</f:layoutData>-->
+<!--					</f:SimpleForm>-->
+				</VBox>
+			</content>
+		</Panel>
+		<mvc:XMLView viewName="sap.ui.Odata.webapp.view.Footer" />
+	</Page>
+
+</mvc:View>

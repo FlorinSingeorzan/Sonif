@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="569f7e3a-4b3e-4641-b4f8-e2048b6baa73" name="Default Changelist" comment="" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+        <option value="tsconfig.json" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="JsFlowSettings">
+    <service-enabled>true</service-enabled>
+    <exe-path />
+    <other-services-enabled>true</other-services-enabled>
+    <auto-save>true</auto-save>
+  </component>
+  <component name="ProjectId" id="1QMiDjcqJXUKa2n9YAT4V97YkhC" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="javascript.nodejs.core.library.configured.version" value="10.15.3" />
+    <property name="last_opened_file_path" value="D:/sdk/downloads/schemas/sap.f.xsd" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="preferences.updates" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Workspace\Odata\WebContent\model\data" />
+      <recent name="D:\Workspace\Odata\WebContent\controller" />
+      <recent name="D:\Workspace\Odata" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="JavaScript Debug.index.html (1)">
+    <configuration name="index.html (1)" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/Odata/WebContent/index.html">
+      <method v="2" />
+    </configuration>
+    <configuration name="index.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/Odata/index.html">
+      <method v="2" />
+    </configuration>
+    <configuration name="Ui5" type="Run an Open UI5 HTML5 Application" factoryName="Open UI5">
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="JavaScript Debug.index.html" />
+      <item itemvalue="JavaScript Debug.index.html (1)" />
+      <item itemvalue="Open UI5.Ui5" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JavaScript Debug.index.html (1)" />
+        <item itemvalue="JavaScript Debug.index.html" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="569f7e3a-4b3e-4641-b4f8-e2048b6baa73" name="Default Changelist" comment="" />
+      <created>1541411341232</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1541411341232</updated>
+      <workItem from="1541411342419" duration="4178000" />
+      <workItem from="1541420060868" duration="1904000" />
+      <workItem from="1541422241366" duration="2040000" />
+      <workItem from="1541492604439" duration="2327000" />
+      <workItem from="1541495605083" duration="3616000" />
+      <workItem from="1541499468068" duration="60000" />
+      <workItem from="1541674550419" duration="1703000" />
+      <workItem from="1542010676584" duration="12849000" />
+      <workItem from="1542097317813" duration="6920000" />
+      <workItem from="1542622321559" duration="23000" />
+      <workItem from="1542622405600" duration="9829000" />
+      <workItem from="1542707191905" duration="8611000" />
+      <workItem from="1542793065799" duration="13570000" />
+      <workItem from="1543227059960" duration="153000" />
+      <workItem from="1543227391390" duration="4433000" />
+      <workItem from="1543311878486" duration="7203000" />
+      <workItem from="1543390794792" duration="13415000" />
+      <workItem from="1543823508798" duration="8882000" />
+      <workItem from="1543913306890" duration="14058000" />
+      <workItem from="1544002221063" duration="7713000" />
+      <workItem from="1544427777825" duration="12287000" />
+      <workItem from="1544519148419" duration="5706000" />
+      <workItem from="1544600282863" duration="11612000" />
+      <workItem from="1545038237140" duration="10192000" />
+      <workItem from="1545122994545" duration="11494000" />
+      <workItem from="1546851780560" duration="9831000" />
+      <workItem from="1546939629573" duration="5521000" />
+      <workItem from="1547013339821" duration="3006000" />
+      <workItem from="1547204661370" duration="10873000" />
+      <workItem from="1547451490986" duration="15705000" />
+      <workItem from="1547542606078" duration="4605000" />
+      <workItem from="1547719034808" duration="14288000" />
+      <workItem from="1548057607114" duration="5633000" />
+      <workItem from="1548324463236" duration="12329000" />
+      <workItem from="1548661049493" duration="6570000" />
+      <workItem from="1548833964918" duration="4997000" />
+      <workItem from="1549265948148" duration="5345000" />
+      <workItem from="1549871461340" duration="12402000" />
+      <workItem from="1550043575293" duration="19358000" />
+      <workItem from="1550474903345" duration="17471000" />
+      <workItem from="1550566558434" duration="9594000" />
+      <workItem from="1550647469271" duration="15441000" />
+      <workItem from="1550825080741" duration="150000" />
+      <workItem from="1550825399896" duration="14171000" />
+      <workItem from="1551086311652" duration="9593000" />
+      <workItem from="1551256455948" duration="10870000" />
+      <workItem from="1551349205991" duration="59000" />
+      <workItem from="1551349373491" duration="1326000" />
+      <workItem from="1551693700128" duration="2384000" />
+      <workItem from="1551955735382" duration="11323000" />
+      <workItem from="1552032416505" duration="13130000" />
+      <workItem from="1552474634187" duration="4797000" />
+      <workItem from="1552565421592" duration="1443000" />
+      <workItem from="1552900790587" duration="1191000" />
+      <workItem from="1553242787924" duration="45644000" />
+      <workItem from="1554201664699" duration="11416000" />
+      <workItem from="1554882908869" duration="306000" />
+      <workItem from="1554883428467" duration="39637000" />
+      <workItem from="1555333530182" duration="11656000" />
+      <workItem from="1555487601356" duration="43886000" />
+      <workItem from="1555929807842" duration="659000" />
+      <workItem from="1555931394367" duration="33959000" />
+      <workItem from="1556181033377" duration="13014000" />
+      <workItem from="1557128872111" duration="50321000" />
+      <workItem from="1557478789621" duration="61122000" />
+      <workItem from="1558521119514" duration="21908000" />
+      <workItem from="1560325368873" duration="30194000" />
+      <workItem from="1561882365286" duration="92623000" />
+      <workItem from="1563178084338" duration="8179000" />
+      <workItem from="1563369176964" duration="4785000" />
+      <workItem from="1564558437312" duration="27668000" />
+      <workItem from="1565077544106" duration="41576000" />
+      <workItem from="1565686780272" duration="294000" />
+      <workItem from="1565687143697" duration="13620000" />
+      <workItem from="1565772015370" duration="6328000" />
+      <workItem from="1565784214627" duration="461000" />
+      <workItem from="1565784696858" duration="17702000" />
+      <workItem from="1566806074297" duration="52119000" />
+      <workItem from="1567586166605" duration="214000" />
+      <workItem from="1567586755860" duration="76472000" />
+      <workItem from="1568624651210" duration="22831000" />
+      <workItem from="1568794672911" duration="4554000" />
+      <workItem from="1569312869433" duration="10199000" />
+      <workItem from="1569398509650" duration="14777000" />
+      <workItem from="1569831462829" duration="155000" />
+      <workItem from="1569831730958" duration="5054000" />
+      <workItem from="1569840118032" duration="38072000" />
+      <workItem from="1570435771588" duration="37712000" />
+      <workItem from="1570704765778" duration="8249000" />
+      <workItem from="1571044254129" duration="10852000" />
+      <workItem from="1571136379712" duration="11869000" />
+      <workItem from="1571645793859" duration="4064000" />
+      <workItem from="1571653287784" duration="8535000" />
+      <workItem from="1571991151083" duration="61137000" />
+      <workItem from="1573731805778" duration="18681000" />
+      <workItem from="1574326617683" duration="7531000" />
+      <workItem from="1575362973811" duration="599000" />
+      <workItem from="1575968800234" duration="1894000" />
+      <workItem from="1576661014363" duration="1021000" />
+      <workItem from="1578474382434" duration="2080000" />
+      <workItem from="1578915091338" duration="651000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="UnknownFeatures">
+    <option featureType="com.intellij.fileTypeFactory" implementationName="*.properties" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ScopeChooserConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>

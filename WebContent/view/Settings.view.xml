@@ -1,0 +1,121 @@
+<mvc:View
+        xmlns="sap.m"
+        xmlns:mvc="sap.ui.core.mvc"
+        xmlns:core="sap.ui.core"
+        controllerName="sap.ui.Odata.webapp.controller.Settings"
+        class="whiteBackground">
+    <Page
+            showHeader="false"
+            backgroundDesign="Transparent">
+        <mvc:XMLView viewName="sap.ui.Odata.webapp.view.Toolbar" />
+        <Panel>
+            <content>
+                <FlexBox  class="fade_line mid sapUiLargeMarginTop"/>
+
+                <Title text="Options"  class="sapUiLargeMarginBegin sapUiMediumMarginTop textBigSize"  />
+                <HBox class="sapUiLargeMargin" justifyContent="SpaceBetween" wrap="Wrap">
+                    <VBox>
+                        <HBox>
+                            <Text class="sapUiSmallMargin textNormalSize" text="Memorize News Categories"/>
+                            <Switch state="{settings>/MemNewsCategories}" change="onChange" >
+                                <layoutData>
+                                    <FlexItemData growFactor="1" />
+                                </layoutData>
+                            </Switch>
+                        </HBox>
+
+                        <HBox>
+                            <Text class="sapUiSmallMargin textNormalSize" text="Consider wallet content when computing news preferences"/>
+                            <Switch state="{settings>/ConWalletContent}" >
+                                <layoutData>
+                                    <FlexItemData growFactor="1" />
+                                </layoutData>
+                            </Switch>
+                        </HBox>
+
+                        <HBox>
+                            <Text class="sapUiSmallMargin textNormalSize" text="Consider watchlist content when computing news preferences"/>
+                            <Switch state="{settings>/ConWlistContent}" >
+                                <layoutData>
+                                    <FlexItemData growFactor="1" />
+                                </layoutData>
+                            </Switch>
+                        </HBox>
+
+                        <HBox>
+                            <Text class="sapUiSmallMargin textNormalSize" text="Base exchange in statistics"/>
+                            <ComboBox placeholder="Select Currency" showSecondaryValues= "true" change="onChange"
+                                      class="sapUiTinyMarginBegin"
+                                      selectedKey="{settings>/BaseExchange}"
+                                      filterSecondaryValues="true"
+                                      textAlign="Center"
+                                      items="{
+										path: 'Coins>/currencies'
+									}">
+                                <core:ListItem key="{Coins>Symbol}" text="{Coins>Name}" additionalText="{Coins>Symbol}"/>
+                            </ComboBox>
+                        </HBox>
+
+                        <HBox>
+                            <Text class="sapUiSmallMargin textNormalSize" text="Number of news to consider"/>
+                            <ComboBox  placeholder="Select Currency" showSecondaryValues= "true"
+                                      selectedKey="{settings>/NoNews}"
+                                      filterSecondaryValues="true"
+                                      textAlign="Center"
+                                     >
+                                <items>
+                                    <core:ListItem key="1" text="Low" additionalText="~50"/>
+                                    <core:ListItem key="5" text="Medium" additionalText="~200"/>
+                                    <core:ListItem key="10" text="Large" additionalText="~500"/>
+                                </items>
+                            </ComboBox>
+                        </HBox>
+
+                        <HBox>
+                            <Text class="sapUiSmallMargin   textNormalSize" wrapping="true" renderWhitespace="true" text="Default Nickname when post"/>
+                            <Input textAlign="Center" value="{settings>/Nickname}" width="115%" />
+                        </HBox>
+                    </VBox>
+
+<!--                    <VBox>-->
+                        <VBox class="phonemin2" width="40%">
+                            <VBox  alignItems="Start">
+                                <Text class="titleNormalSize" text="What Memorize News Categories refers at?" />
+                            </VBox>
+                            <Text wrapping="true"  class="textNormalSize sapUiMediumMarginTop" text=" &#8195; When this setting is on in the news feed page selected categories will be memorized in the database. When a new session will be open last saved categorise will be used to compute news preferences. If set to off the category list will be empty and the order of the news feed will be based on appearance date and hour. " />
+
+                            <VBox class="sapUiLargeMarginTop"  alignItems="Start">
+                                <Text class="titleNormalSize" text="Considering wallet content?" />
+                            </VBox>
+                            <Text wrapping="true"  class="textNormalSize sapUiMediumMarginTop" text=" &#8195; If this setting is on categories from your wallet will be extracted and used when computing news feed order. For example if you have Bitcoin in your wallet a category called 'BTC' will be extracted and appended to the existing category list so more relevant news about your owned cryptos will be recommended. The extracted categories will also appear in the list presented in the feed section. If set to off no categories will be extracted from the wallet so news will be based only the list presented in the feed page. "   />
+
+                            <VBox class="sapUiLargeMarginTop"  alignItems="Start">
+                                <Text class="titleNormalSize" text="Considering watchlist content?" />
+                                </VBox>
+                            <Text wrapping="true"  class="textNormalSize sapUiMediumMarginTop" text=" &#8195; This setting is similar with the above one with the exception that new categories are extracted from the watchlist instead of wallet. So if set on Sonif system will recommend a order in the news feed  also based on the content of your watchlist. If a cryptocurrency is for interest for you we will assure you will receive news about it." />
+
+
+                            <VBox class="sapUiLargeMarginTop"  alignItems="Start">
+                            <Text class="titleNormalSize" text="For what based exchange is used for?" />
+                            </VBox>
+                            <Text wrapping="true"  class="textNormalSize sapUiMediumMarginTop" text=" &#8195; The most statistics presented on this website have a base conversion exchange. For example the historical values of a crypto are presented against another, in  13 November 2019 the value of one Bitoin is 8772.63 American Dollar or USD. So instead USD, the conversion base exchange can be set based on your preference. It can be considered another crypto or a fiat exchange. All statistics on Sonif will have the selected base exchange. " />
+
+                            <VBox class="sapUiLargeMarginTop"  alignItems="Start">
+                                <Text class="titleNormalSize" text="What number of news I should select?" />
+                            </VBox>
+                            <Text wrapping="true"  class="textNormalSize sapUiMediumMarginTop" text=" &#8195; This feature refer at the number of news considered in the feed section. If a large number is selected more news will be presented and based on the category list most relevant will appear first. We recommend using a low number because the list will contain less news and all are more recent. Doing so the page will open faster and the information presented is more recent and more relevant because of the fast moving of the market.  " />
+
+                            <VBox class="sapUiLargeMarginTop"  alignItems="Start">
+                                <Text class="titleNormalSize" text="Where the Nickname is used?" />
+                            </VBox>
+                            <Text wrapping="true"  class="textNormalSize sapUiMediumMarginTop" text=" &#8195; When posting a review or in the forum section a nickname will be used  for pseudo anonymity. The name can be set here or be modified when posting something in the social sections. This helps when sharing something because the nickname will be set just once not at every post.  " />
+                        </VBox>
+<!--                    </VBox>-->
+                </HBox>
+            </content>
+            <FlexBox height="400px"/>
+        </Panel>
+
+        <mvc:XMLView viewName="sap.ui.Odata.webapp.view.Footer" />
+    </Page>
+</mvc:View>

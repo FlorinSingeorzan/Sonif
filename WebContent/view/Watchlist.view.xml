@@ -1,0 +1,83 @@
+<mvc:View
+        xmlns="sap.m"
+        xmlns:mvc="sap.ui.core.mvc"
+        xmlns:core="sap.ui.core"
+        controllerName="sap.ui.Odata.webapp.controller.Watchlist"
+        class="whiteBackground">
+    <Page
+            id="watchlistPage"
+            showHeader="false"
+            backgroundDesign="Transparent">
+
+        <Panel class="sapUiNoContentPadding">
+            <mvc:XMLView viewName="sap.ui.Odata.webapp.view.Toolbar" />
+        <content>
+            <!--pushpin-off-->
+            <FlexBox  class="fade_line mid sapUiLargeMarginTop"/>
+            <VBox class="sapUiLargeMarginTop" wrap="Wrap" justifyContent="Center" alignContent="Center" alignItems="Center">
+                <Input
+                        id="watchlistCurrency"
+                        type="Text"
+                        width="110%"
+                        textFormatMode="KeyValue"
+                        placeholder="Enter Currency ..."
+                        showSuggestion="true"
+                        showValueHelp="false"
+                        valueHelpRequest="handleValueHelp"
+                        suggestionItems="{/CurrencySet}"
+                        suggestionItemSelected="addCurrency">
+                    <suggestionItems>
+                        <core:ListItem key="{Symbol}" text="{Name}" additionalText="{Symbol}" />
+                    </suggestionItems>
+                </Input>
+            </VBox>
+
+            <Table id="watchlistTable" items="{CCraw>/raw}" noDataText="No currency watched"
+                   growing="true" growingThreshold="100" growingScrollToLoad="true">
+                <columns>
+                    <Column demandPopin="true" minScreenWidth="Phone">
+                        <Label text="Name" />
+                    </Column>
+                    <Column  styleClass="sapUiVisibleOnlyOnDesktop"  demandPopin="true" minScreenWidth="Phone">
+                        <Label class="sapUiVisibleOnlyOnDesktop" id="ccSymbol" text="Symbol" />
+                    </Column>
+                    <Column demandPopin="true" minScreenWidth="Phone">
+                        <Label text="Price" />
+                    </Column>
+                    <Column  demandPopin="true" minScreenWidth="Phone">
+                        <Label wrapping="true"  text="24 Change"  class="sapUiNoMargin"/>
+                    </Column>
+                    <Column styleClass="sapUiVisibleOnlyOnDesktop"  demandPopin="true" minScreenWidth="Phone">         <!--add class-->
+                        <Label  class="sapUiVisibleOnlyOnDesktop"  text="Price Chart (USD)" />
+                    </Column>
+                    <Column>
+                        <Label  text="Action" />
+                    </Column>
+                </columns>
+                <ColumnListItem class="numObjInherit">
+                    <Link id="CCname" text="{CCraw>Name}" press="onShowDetails(${CCraw>FROMSYMBOL})"
+                          emphasized="true" />
+                    <Text class="sapUiVisibleOnlyOnDesktop" text="{CCraw>FROMSYMBOL}" />
+                    <Text text="{CCraw>PRICE}"  />
+                    <ObjectListItem class="numObjInherit "
+                                    number="{
+                                    parts: [{path: 'CCraw>CHANGEPCT24HOUR'}],
+                                    formatter: '.formatChangeH',
+                                    templateShareable:true
+                                    }"
+                                    numberUnit="%"
+                                    numberState="{= ${CCraw>CHANGEPCT24HOUR}>0 ? 'Success' : 'Error' }" />
+                    <ImageContent class="sapUiVisibleOnlyOnDesktop" src="{CCraw>Chart}"  description="Last 7 days chart"/>
+                    <Button  icon="sap-icon://decline"  press="removeFromWatchlist"/>
+                </ColumnListItem>
+
+            </Table>
+        </content>
+            <FlexBox width="auto" height="15rem" backgroundDesign="Translucent"/>
+
+        </Panel>
+        <mvc:XMLView viewName="sap.ui.Odata.webapp.view.Footer" />
+
+
+    </Page>
+</mvc:View>

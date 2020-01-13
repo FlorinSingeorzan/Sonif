@@ -1,0 +1,22 @@
+<core:FragmentDefinition xmlns="sap.m"
+                         xmlns:core="sap.ui.core">
+    <Dialog horizontalScrolling="false"  id="dialog" contentWidth="auto" contentHeight="auto"
+            class="sapUiSizeCompact" xmlns:html="http://www.w3.org/1999/xhtml">
+        <content>
+            <FlexBox
+                     direction="Column" justifyContent="Center" alignItems="Center" height="auto">
+                <FlexBox  alignItems="Center" wrap="Wrap">
+                    <Text  wrapping="true"  class="textBigSize newsDialogText sapUiMediumMargin" text="&#8195; &#8195; We provide the most recent and high quality news from 44 sources including  top providers in this section of social media. We have build a recommendation system that can be access by pressing Categories tab and saving  your interest topics. We will  continuously improve Sonif - Stay Informed! "/>
+                </FlexBox>
+                <FlexBox wrap="Wrap"  alignItems="Center">
+                <Image src="images/newspaper.png" width="100%" height="auto"/>
+                </FlexBox>
+<!--                <Label design="Bold" class="newsDialogLabel" text="Stay Informed"/>-->
+            </FlexBox>
+        </content>
+        <buttons>
+            <Button text="Ok" press="onClose"/>
+        </buttons>
+
+    </Dialog>
+</core:FragmentDefinition>

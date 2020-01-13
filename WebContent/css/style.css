@@ -1,0 +1,570 @@
+.homeButton .sapMBtnInner.sapMBtnEmphasized.sapMBtnHoverable{
+	border-radius: 0px 0px;
+	background-color: #595959;
+	border-color: #4d4d4d;
+	-webkit-transition-duration: 0.4s; 
+    transition-duration: 0.4s;
+}
+.homeButtonH:hover .sapMBtnInner.sapMBtnEmphasized.sapMBtnHoverable{
+	background-color: #4d4d4d;
+	border-color: #4d4d4d;
+	
+} 
+
+.startpageImage{
+	opacity: 1
+	
+}
+
+.toolbar{
+	border-radius: 2px;
+	background: linear-gradient(to top, #485d6f, #2f3c48)!important;
+    box-shadow: 0 5px 10px black;
+
+}
+
+.contactBox{
+    margin-left: 20%;
+    margin-right: 20%;
+    border-radius: 4px;
+    border: 1px solid #b9b9b9;
+    min-width: 320px;
+    width: 60%;
+}
+
+.sapMLIB.sapMObjLItem.numObjInherit{
+
+	outline-style: none;
+}
+
+.sapSuiteUiCommonsTimeline {
+    max-width: 100%;
+
+}
+
+.phonemin {
+	min-width: 200px;
+}
+
+.phonemin2 {
+    min-width: 250px;
+}
+
+
+.textBigSize{
+	font-size: 18px
+}
+
+.textNormalSize{
+    font-size: 16px;
+}
+
+.titleNormalSize{
+    font-size: 26px;
+    font-weight: bold;
+}
+
+
+.startpageTileImage {
+    background: url("../images/cashbtc2.jpg") no-repeat   100% 100%;
+    /*width: 100%;*/
+    /*height: auto;*/
+    /*background-size: 100% 100%;*/
+	/*width: 120%;*/
+	/*height: 250px;*/
+	/*max-width: 100%;*/
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.startpageText {
+	vertical-align: middle;
+	text-align: center;
+	color: #494949;
+	font-size: 130% ;
+    max-font-size: 130%;
+    min-font-size: 100%;
+	font-family: Centaur, cursive ;
+
+}
+
+.blockTile{
+	background-size: 100% 100%;
+}
+
+.fade_line {
+     height: 2px;
+     background-color: #E6E6E6;
+     width: 80%;
+     /*margin: 0 auto;*/
+     background-image: linear-gradient(left , white 2%, #E6E6E6 50%, white 98%);
+     background-image: -o-linear-gradient(left , white 2%, #E6E6E6 50%, white 98%);
+     background-image: -moz-linear-gradient(left , white 2%, #E6E6E6 50%, white 98%);
+     background-image: -webkit-linear-gradient(left , white 2%, #E6E6E6 50%, white 98%);
+     background-image: -ms-linear-gradient(left , white 2%, #E6E6E6 50%, white 98%);.
+ }
+
+.fade_line.lleft {
+    background-image: -webkit-gradient( linear, left bottom, right bottom, color-stop(0.02, white), color-stop(0.5, transparent), color-stop(0.98, transparent) );
+    /*background-image: -webkit-gradient( linear, left bottom, right bottom, color-stop(0.02, white), color-stop(0.5, gray), color-stop(0.98, black) );*/
+}
+
+.fade_line.llogin {
+    background-image: -webkit-gradient( linear, left bottom, right bottom, color-stop(0.02, #2389c7), color-stop(0.5, #647d93), color-stop(0.98, #465c6e) );
+}
+
+/*#3f5263, #93b7d6*/
+
+.fade_line.lright {
+    background-image: -webkit-gradient( linear, left bottom, right bottom, color-stop(0.02, white), color-stop(0.5, transparent), color-stop(0.98, transparent) );
+}
+
+.fade_line.mid {
+    background-image: -webkit-gradient( linear, left bottom, right bottom, color-stop(0.02, white), color-stop(0.5, gray), color-stop(0.98, white) );
+    width: 100%;
+    margin: 0 auto;
+}
+
+.fade_line.full {
+    background-image: -webkit-gradient( linear, left bottom, right bottom, color-stop(0.02, lightgray), color-stop(0.5, gray), color-stop(0.98, lightgray) );
+    width: 100%;
+    margin: 0 auto;
+}
+
+.ease_right{
+    position: relative;
+    animation: rmove 3s forwards;
+    -webkit-animation: rmove 3s forwards;
+
+
+}
+@-webkit-keyframes rmove {
+    from {
+        left: 0;
+    }
+    to {
+        left: 20%;
+    }
+}
+
+.ease_left{
+    position: relative;
+    animation: lmove 3s forwards;
+    -webkit-animation: lmove 3s forwards;
+
+
+}
+@-webkit-keyframes lmove {
+    from {
+        left: 20%;
+    }
+    to {
+        left: 0;
+    }
+}
+
+
+@-webkit-keyframes sopacity {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.logoName .sapMText{
+    vertical-align: middle;
+    text-align: center;
+    font-size: 80px;
+    font-family: "Bradley Hand ITC", cursive ;
+    animation: sopacity 3s forwards;
+    -webkit-animation: sopacity 3s forwards;
+
+}
+
+.flexDesign{
+    background: linear-gradient(to top, white, #f5faff);
+    min-width: 320px;
+    /*border: lightgray 1px solid;*/
+    /*box-shadow: rgb(223, 227, 235) 0 0 1.5rem 0.4rem*/
+
+}
+
+.upFlex{
+    justify-content: space-around;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.flexDesign:hover {
+    background: #f5faff;
+}
+
+
+.blackBackground{
+    background: black;
+}
+
+.learnMoreBtn{
+    position:  absolute;
+    /*left: 20px;*/
+    bottom: 20px;
+}
+
+.stripDesign{
+    margin-left: 10%;
+    margin-right: 15%;
+    background-color: rgba(147, 183, 214, 0.49);
+}
+
+.iconImage .sapMImageContentImageIcon.sapUiIcon{
+    font-size: 7rem;
+}
+.iconAbout .sapMImageContentImageIcon.sapUiIcon{
+    font-size: 7rem!important;
+}
+
+.aboutBox1{
+    background: linear-gradient( to right,#3f5161, #485d6f);
+}
+
+.aboutBox2{
+    background: linear-gradient( to right,#485d6f, #3f5161);
+}
+
+.newsDialogLabel{
+    position: relative;
+    left: 120%;
+    bottom: 70px;
+}
+
+.newsDialogText{
+    max-width: 640px;
+}
+
+
+.iconImagePosition .sapMImageContent{
+    height: 0;
+    width: 0;
+}
+
+.replyBox{
+    border: lightgray 1px solid;
+
+}
+
+.noReplyBox{
+    position: absolute;
+    left: auto;
+    right: 10px;
+    top: auto;
+    bottom: 10px;
+}
+
+.vCurrencyFlexBox{
+    background-color: white ;
+    min-width: 160px;
+    border: lightgray 1px solid;
+}
+
+
+.vCurrencyImages .sapMImageContentImageIcon {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    max-height: 160px;
+    max-width: 160px;
+    padding: 5px;
+    border: none;
+    transition: all .2s ease-in-out;
+}
+
+
+.vCurrencyImages :hover {
+  opacity: 0.6;
+  transform: scale(1.1);
+}
+
+html.sap-desktop .sapUiBody :focus {
+    outline: none;
+
+}
+
+
+.miningDiv {
+    background-color: #fafafa;
+}
+
+.responsive{
+    width: 100%;
+    height: auto;
+}
+
+.tabs .sapMIBar .sapMBarChild {
+    position: absolute;
+    left: 20px;
+
+}
+.tabs .saveButton {
+    left: 100px!important;
+}
+
+.prefer {
+    padding: 0!important;
+
+}
+
+.hSearch{
+    border: 1px solid #fafafa;
+}
+
+.footer{
+    margin-top:auto;
+    bottom: 0;
+}
+
+.toolbarButton  {
+    outline: none;
+
+}
+
+.presentationText{
+    position: absolute;
+    left: 10%;
+    top: 10%;
+}
+
+.slidingVertical{
+    display: inline;
+    text-indent: 8px;+
+}
+
+
+.sonifText{
+    font-size: 40px;
+    font-family: "Bradley Hand ITC" ,cursive;
+
+}
+
+.sonifFooter{
+    font-size: 25px;
+    color: #2970b0;
+}
+
+.stile{
+    background: #f5faff;
+}
+
+.stile2{
+    background: #465c6e;
+}
+
+
+.slidingVertical span{
+    animation: topToBottom 12.5s linear infinite 0s;
+    -webkit-animation: topToBottom 12.5s linear infinite 0s;
+    color: #2970b0;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+}
+.slidingVertical span:nth-child(2){
+    animation-delay: 2.5s;
+
+    -webkit-animation-delay: 2.5s;
+}
+.slidingVertical span:nth-child(3){
+    animation-delay: 5s;
+
+    -webkit-animation-delay: 5s;
+}
+.slidingVertical span:nth-child(4){
+    animation-delay: 7.5s;
+
+    -webkit-animation-delay: 7.5s;
+}
+.slidingVertical span:nth-child(5){
+    animation-delay: 10s;
+    -webkit-animation-delay: 10s;
+}
+
+.slidingVertical span:nth-child(6){
+    animation-delay: 12.5s;
+    -webkit-animation-delay: 12.5s;
+}
+
+@-moz-keyframes topToBottom{
+    0% { opacity: 0; }
+    5% { opacity: 0; -moz-transform: translateY(-50px); }
+    10% { opacity: 1; -moz-transform: translateY(0px); }
+    25% { opacity: 1; -moz-transform: translateY(0px); }
+    30% { opacity: 0; -moz-transform: translateY(50px); }
+    80% { opacity: 0; }
+    100% { opacity: 0; }
+}
+@-webkit-keyframes topToBottom{
+    0% { opacity: 0; }
+    5% { opacity: 0; -webkit-transform: translateY(-50px); }
+    10% { opacity: 1; -webkit-transform: translateY(0px); }
+    25% { opacity: 1; -webkit-transform: translateY(0px); }
+    30% { opacity: 0; -webkit-transform: translateY(50px); }
+    80% { opacity: 0; }
+    100% { opacity: 0; }
+}
+
+
+.wrapper {
+    min-width: 380px;
+    width: 40%;
+    height: 600px;
+    position: relative;
+    margin: 3% auto;
+    box-shadow: 2px 18px 70px 0 #9D9D9D;
+    overflow: hidden;
+}
+
+.loginHeader {
+    width: 100%;
+    height:450px;
+    background: linear-gradient(to left, #2f3c48, #93b7d6);
+    position: absolute;
+    top: -300px;
+    box-sizing: border-box;
+    padding: 6%;
+    transition: all 0.5s ease-in-out;
+    z-index: 11;
+}
+
+.loginForm {
+    margin-left: 20px;
+    color: #fff;
+    display: none;
+    transition: all 0.5s ease-in-out;
+    transition-delay: 0.3s;
+}
+
+.loginText{
+    font-size: 36px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    display: block;
+}
+
+
+.loginInput {
+    margin-top: 30px;
+    height: 40px;
+    border-radius: 2px;
+    border: none;
+    background-color: #444;
+    opacity: 0.6;
+    outline: none;
+    color: #fff;
+
+}
+
+.cta{
+    min-width: 60px;
+    width: 8%;
+    height: 60px;
+    border-radius: 50%;
+    background: #2389c7;
+    border: 2px solid #fff;
+    position: absolute;
+    bottom: -30px;
+    left: 45%;
+    color: #fff;
+    outline: none;
+    cursor: pointer;
+    z-index: 15;
+}
+
+.contactIcon {
+    position: relative ;
+    top: -30px;
+    margin: 0 auto;
+    padding-right: 0;
+    padding-left: 0;
+
+    background: white;
+}
+
+.contactIcon  .sapMImageContentImageIcon.sapUiIcon{
+    font-size: 5rem;
+    padding-right: 30px;
+    outline: none;
+}
+.loginBody{
+    background-color: #fff;
+    width: 100%;
+    height: 450px;
+    position: absolute;
+    bottom: 0;
+    padding: 10%;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.show-hide {
+    display: block;
+}
+
+.expand {
+    transform: translateY(300px);
+}
+
+.invalidMsg  .sapMMsgStrip {
+    border: none;
+}
+
+:focus>[class*='sapM'] {
+
+    outline-style: none !important ;
+
+}
+
+.homeBackground{
+    background: linear-gradient(
+            135deg,
+            white, #e6e6e6
+    );;
+}
+
+.whiteBackground {
+    background: white;
+}
+
+.whiteText {
+    color: white;
+}
+
+.phoneWidth{
+    min-width: 400px;
+}
+
+.titleBigSize{
+    font-size: 28px;
+}
+
+
+.sonifLogin {
+    position: relative;
+    animation: move 0.8s forwards;
+}
+
+@keyframes move {
+    0% {
+        left: 0;
+        top: 0;
+    }
+
+    100% {
+
+        top: 280px;
+        /*transform: translate(170%, 550%);*/
+    }
+}

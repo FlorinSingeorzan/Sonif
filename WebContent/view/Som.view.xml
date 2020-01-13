@@ -1,0 +1,197 @@
+<mvc:View xmlns="sap.m" xmlns:mvc="sap.ui.core.mvc"
+          xmlns:viz.feeds="sap.viz.ui5.controls.common.feeds"
+          xmlns:viz.data="sap.viz.ui5.data"
+          xmlns:viz="sap.viz.ui5.controls"
+          xmlns:layout="sap.ui.layout"
+          controllerName="sap.ui.Odata.webapp.controller.Som"
+          displayBlock="true"
+          xmlns:suite="sap.suite.ui.commons"
+          class="whiteBackground"
+>
+    <Page  showHeader="false" backgroundDesign="Transparent" >
+        <mvc:XMLView viewName="sap.ui.Odata.webapp.view.Toolbar" />
+        <Panel>
+        <viz:Popover id="idPopOver" />
+
+        <layout:Grid defaultSpan="L12 M12 S12"
+                position="Center" vSpacing="0" hSpacing="5">
+        <suite:ChartContainer showSelectionDetails="true" wrapLabels="true" class="tabs"
+                              autoAdjustHeight="false" id="newsContainer">
+            <suite:ChartContainerContent icon="sap-icon://chart-table-view" title="News">
+                <suite:content>
+                    <FlexBox class="sapUiNoMargin ">
+                    <Panel  id="categories"   visible="false"  width="180px" class="sapUiNoMargin sapUiNoContentPadding">
+                       <content >
+                        <Table  class="sapUiNoMargin" visible="true"  width="auto" select="onCategorySelection" mode="MultiSelect" id="preferences" footerText="Stay Informed"
+                             >
+                            <headerToolbar>
+                                <Toolbar>
+                                    <Title  text="Topics"/>
+                                    <Button class="sapUiNoMargin saveButton" id="saveCategory"  type="Emphasized" enabled="false" text="Show" press="onSave"/>
+                                </Toolbar>
+                            </headerToolbar>
+                            <columns>
+                                <Column  >
+                                    <Label text="Category" />
+                                </Column>
+
+                            </columns>
+                            <items>
+                                <ColumnListItem  id="btc" >
+                                    <Text  text="BTC" />
+                                </ColumnListItem>
+                                <ColumnListItem id="eth" >
+                                    <Text text="ETH" />
+                                </ColumnListItem>
+                                <ColumnListItem id="ltc"  >
+                                    <Text text="LTC" />
+                                </ColumnListItem>
+                                <ColumnListItem id="xmr" >
+                                    <Text text="XMR" />
+                                </ColumnListItem>
+                                <ColumnListItem id="zec" >
+                                    <Text text="ZEC" />
+                                </ColumnListItem>
+                                <ColumnListItem id="etc" >
+                                    <Text text="ETC" />
+                                </ColumnListItem>
+                                <ColumnListItem id="xrp" >
+                                    <Text text="XRP" />
+                                </ColumnListItem>
+                                <ColumnListItem id="trx" >
+                                    <Text text="TRX" />
+                                </ColumnListItem>
+                                <ColumnListItem id="ada"  >
+                                    <Text text="ADA" />
+                                </ColumnListItem>
+                                <ColumnListItem id="dash" >
+                                    <Text text="DASH" />
+                                </ColumnListItem>
+                                <ColumnListItem id="xtz" >
+                                    <Text text="XTZ" />
+                                </ColumnListItem>
+                                <ColumnListItem id="usdt" >
+                                    <Text text="USDT" />
+                                </ColumnListItem>
+                                <ColumnListItem id="mining"  >
+                                    <Text text="Mining" />
+                                </ColumnListItem>
+                                <ColumnListItem  id="exchange" >
+                                    <Text text="Exchange" />
+                                </ColumnListItem>
+                                <ColumnListItem id="market"  >
+                                    <Text text="Market" />
+                                </ColumnListItem>
+                                <ColumnListItem id="asia" >
+                                    <Text text="Asia" />
+                                </ColumnListItem>
+                                <ColumnListItem id="ico" >
+                                    <Text text="ICO" />
+                                </ColumnListItem>
+                                <ColumnListItem id="regulation" >
+                                    <Text text="Regulation" />
+                                </ColumnListItem>
+                                <ColumnListItem  id="blockchain" >
+                                    <Text text="Blockchain" />
+                                </ColumnListItem>
+                                <ColumnListItem  id="trading" >
+                                    <Text text="Trading" />
+                                </ColumnListItem>
+                                <ColumnListItem  id="technology" >
+                                    <Text text="Technology" />
+                                </ColumnListItem>
+                                <ColumnListItem  id="wallet" >
+                                    <Text text="Wallet" />
+                                </ColumnListItem>
+                                <ColumnListItem  id="altcoin" >
+                                    <Text text="Altcoin" />
+                                </ColumnListItem>
+                                <ColumnListItem  id="fiat" >
+                                    <Text text="Fiat" />
+                                </ColumnListItem>
+                                <ColumnListItem  id="business" >
+                                    <Text text="Business" />
+                                </ColumnListItem>
+                                <ColumnListItem   id="commodity" >
+                                    <Text text="Commodity" />
+                                </ColumnListItem>
+                                <ColumnListItem  id="sponsored" >
+                                    <Text text="Sponsored" />
+                                </ColumnListItem>
+                            </items>
+                        </Table>
+                       </content>
+                    </Panel>
+                    <List class="sapUiNoMargin" id="newsFeed" headerText="What's new" noDataText="{i18n>loading}"  items="{path:'preferred>/News', templateShareable:true}" growing="true" growingDirection="Downwards"  growingThreshold="600" growingScrollToLoad="true">
+                       <headerToolbar>
+                           <Toolbar>
+                               <HBox>
+                                   <Title class="sapUiSmallMarginTop" text="What's new"/>
+                                   <FlexBox width="10px" />
+                                   <Button text="Categories" press="onCategoryShow" />
+                                   <Button text="Most Recent" press="onRecentSelect"/>
+                               </HBox>
+                           </Toolbar>
+                       </headerToolbar>
+                        <FeedListItem  sender="{preferred>title}"
+                                       icon="{preferred>imageurl}"    iconPress=".onOriginalPostPage(${preferred>url})" senderPress=".onOriginalPostPage(${preferred>url})"
+                                       iconDensityAware="false" info="{preferred>categories}"
+                                       timestamp="{
+									path: 'preferred>published_on',
+									formatter: '.formatJSONDate',
+									templateShareable:true
+									}"
+                                       text="{preferred>body}" convertLinksToAnchorTags="All">
+                        </FeedListItem>
+                    </List>
+                    </FlexBox>
+                </suite:content>
+            </suite:ChartContainerContent>
+            <suite:ChartContainerContent icon="sap-icon://overview-chart"
+                                         title="Self Organising Map">
+                <suite:content>
+                <layout:FixFlex minFlexSize="850">
+                <layout:flexContent>
+                <viz:VizFrame id="idVizFrame" uiConfig="{applicationSet:'fiori'}"
+                              height='95%' width="100%" vizType='bubble' >
+                    <viz:dataset>
+                        <viz.data:FlattenedDataset data="{matrix>/Data}" >
+                            <viz.data:dimensions>
+
+                                <viz.data:DimensionDefinition name="Category"
+                                                              value="{matrix>categories}" />
+                            </viz.data:dimensions>
+                            <viz.data:measures>
+                                <viz.data:MeasureDefinition name="X"
+                                                            value="{matrix>x}" />
+                                <viz.data:MeasureDefinition name="Y"
+                                                            value="{matrix>y}" />
+                                <viz.data:MeasureDefinition name="Dimension"
+                                                            value="{matrix>dimension}" />
+                            </viz.data:measures>
+                        </viz.data:FlattenedDataset>
+                    </viz:dataset>
+                    <viz:feeds>
+                        <viz.feeds:FeedItem uid="valueAxis" type="Measure"
+                                            values="X" />
+                        <viz.feeds:FeedItem uid="valueAxis2" type="Measure"
+                                            values="Y" />
+                        <viz.feeds:FeedItem uid="bubbleWidth" type="Measure"
+                                            values="Dimension" />
+                        <viz.feeds:FeedItem uid="color" type="Dimension"
+                                            values="Category" />
+                    </viz:feeds>
+                </viz:VizFrame>
+                </layout:flexContent>
+                </layout:FixFlex>
+
+                </suite:content>
+            </suite:ChartContainerContent>
+
+        </suite:ChartContainer>
+        </layout:Grid>
+        </Panel>
+        <mvc:XMLView viewName="sap.ui.Odata.webapp.view.Footer" />
+    </Page>
+
+</mvc:View>

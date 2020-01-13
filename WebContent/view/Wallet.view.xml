@@ -1,0 +1,136 @@
+<mvc:View xmlns="sap.m" xmlns:mvc="sap.ui.core.mvc" xmlns:core="sap.ui.core"
+ 	xmlns:suite="sap.suite.ui.commons"
+	controllerName="sap.ui.Odata.webapp.controller.Wallet"
+	displayBlock="true"
+	class="whiteBackground">
+	<Page id="walletPage" showHeader="false" backgroundDesign="Transparent">
+		<mvc:XMLView viewName="sap.ui.Odata.webapp.view.Toolbar" />
+		<Panel class="sapUiNoContentPadding">
+		<content>
+			<FlexBox id="l2" class="fade_line mid sapUiLargeMarginTop">
+			</FlexBox>
+			<VBox fitContainer="false"  backgroundDesign="Solid" wrap="Wrap">
+			<HBox  wrap="Wrap">
+				<VBox >
+			<SegmentedButton  selectedKey="table" class="phonemin sapUiLargeMarginTop sapUiLargeMarginBegin sapUiSmallMarginBottom">
+					<items>
+					
+						<SegmentedButtonItem    text="Table" key="table"  press="onWalletNav">
+						<customData>
+						<core:CustomData
+						key="target"
+						value="p1" />
+						</customData>
+						</SegmentedButtonItem>
+						<SegmentedButtonItem  text="History"   press="onWalletNav">
+						<customData>
+						<core:CustomData
+						key="target"
+						value="p2" />
+						</customData>
+						</SegmentedButtonItem>
+						<SegmentedButtonItem  text="Transaction"  press="onWalletNav">
+						<customData>
+						<core:CustomData
+						key="target"
+						value="p3" />
+						</customData>
+						</SegmentedButtonItem>
+					
+					</items>
+			</SegmentedButton>
+<!--				 todo investment page -->
+			<Label design="Bold" class="sapUiLargeMarginBegin" labelFor="address"  text="Wallet Address"/>
+				<HBox class="sapUiLargeMarginBegin">
+				<core:Icon color="#2970b0" src="sap-icon://key"/>
+				<Text class="sapUiSmallMarginBegin" id="address"
+												text="{
+												path: '/WalletSet',
+												formatter: '.formatAddress',
+												templateShareable:true
+												}" />
+				</HBox>
+				</VBox>
+					<Image  alt="ims" id="qrAddress" class="sapUiMediumMarginTop sapUiMediumMarginBegin"/>
+				</HBox>
+
+		<NavContainer
+			id="navCon"
+			width="auto"
+			height="40rem"
+			defaultTransitionName="show"
+			class="sapUiLargeMarginBottom sapUiMediumMargin">
+			<Page
+				id="p1"
+				title="Wallet" >
+				<content>
+				<Table id="walletTable" items="{/WalletSet}"
+					growing="true" growingThreshold="10" growingScrollToLoad="true">
+					<columns>
+						<Column demandPopin="true" >
+							<Label text="Currency" />
+						</Column>
+						<Column demandPopin="true" >
+							<Label text="Symbol" />
+						</Column>
+						<Column demandPopin="true" >
+							<Label text="Amount" />
+						</Column>			
+					</columns>
+					<ColumnListItem class="numObjInherit" >  <!-- type="Active" -->
+						<!-- <ObjectIdentifier title="{cryptocurrencyData>name}" /> -->
+						<Text text="{Ddtext}" />
+						<Text text="{Currency}" />
+						<Text text="{path:'Amount', formatter: '.formatAmount'}" />
+						
+				
+					</ColumnListItem>
+				</Table>
+				
+				</content>
+			</Page>
+			<Page showHeader="false"
+				id="p2" >
+			<suite:Timeline
+			id="historyTransaction"
+			width="100%"
+			enableDoubleSided="false"
+			growing="false"
+			groupBy="dateTime"
+			lazyLoading="true"
+			sort="true"
+			sortOldestFirst="false"
+			content="{transferHistory>/data}"
+			textHeight="2px"
+			showHeaderBar="false"
+			noDataText="{i18n>loadingWalletHistory}">
+
+			<suite:TimelineItem
+				dateTime="{transferHistory>TransferDate}"
+				icon="{path: 'transferHistory>TrType', formatter: '.iconTransaction'}"
+				title="{transferHistory>TrType}"
+				>
+				<suite:embeddedControl>
+					<VBox>
+						<Text
+							text="{path:'transferHistory>Text' }"
+							class="sapUiTinyMargin" />
+					</VBox>
+				</suite:embeddedControl>
+			</suite:TimelineItem>
+			</suite:Timeline>
+			</Page>
+			<Page
+				id="p3"
+				showHeader="false">
+				 <mvc:XMLView viewName="sap.ui.Odata.webapp.view.TransferWizard" />
+			</Page>
+		</NavContainer>
+			</VBox>
+
+		</content>
+		</Panel>
+	<mvc:XMLView viewName="sap.ui.Odata.webapp.view.Footer" />
+
+	</Page>
+</mvc:View>

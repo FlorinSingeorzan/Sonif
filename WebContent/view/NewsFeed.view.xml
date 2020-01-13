@@ -1,0 +1,23 @@
+<mvc:View xmlns="sap.m" xmlns:mvc="sap.ui.core.mvc"
+	controllerName="sap.ui.Odata.webapp.controller.NewsFeed"
+	displayBlock="true">
+	<Page showHeader="false" backgroundDesign="Solid">
+		<mvc:XMLView viewName="sap.ui.Odata.webapp.view.Toolbar" />
+		<content>
+			<FlexBox  class="fade_line lleft sapUiLargeMarginTop"/>
+			<List id="newsFeed" headerText="What's new"  items="{path:'news>/Data', templateShareable:true}" growing="true" growingDirection="Downwards"  growingThreshold="10" growingScrollToLoad="true">
+				 <FeedListItem  sender="{news>title}"
+                    icon="{news>imageurl}"    iconPress=".onOriginalPostPage(${news>url})" senderPress=".onOriginalPostPage(${news>url})"
+                    iconDensityAware="false" info="{news>source}"
+								timestamp="{
+									path: 'news>published_on',
+									formatter: '.formatJSONDate',
+									templateShareable:true
+									}"
+								text="{news>body}" convertLinksToAnchorTags="All">
+                </FeedListItem>
+			</List>
+		</content>
+	</Page>
+
+</mvc:View>

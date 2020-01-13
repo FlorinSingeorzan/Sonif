@@ -1,0 +1,52 @@
+<mvc:View class="whiteBackground" controllerName="sap.ui.Odata.webapp.controller.Contact"
+          xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:core="sap.ui.core"  xmlns:f="sap.ui.layout.form"  xmlns:html="http://www.w3.org/1999/xhtml">
+
+    <Page showHeader="false" backgroundDesign="Transparent" >
+        <mvc:XMLView viewName="sap.ui.Odata.webapp.view.Toolbar" />
+        <FlexBox  class="fade_line mid sapUiLargeMarginTop"/>
+        <Panel class="sapUiNoContentPadding" backgroundDesign="Solid">
+            <content >
+                <VBox alignItems="Center" >
+
+                    <Title class="sapUiLargeMarginTop textBigSize" text="Contact"/>
+                    <VBox width="auto" class="sapUiLargeMargin contactBox" backgroundDesign="Translucent">
+                        <ImageContent class="contactIcon" src="sap-icon://headset"/>
+                    <HBox wrap="Wrap"   justifyContent="Start" backgroundDesign="Translucent">
+
+                            <VBox class="sapUiSmallMargin" backgroundDesign="Translucent">
+                                <Text class="sapUiSmallMargin textBigSize" text="Need help?"/>
+                                <Text class="sapUiSmallMargin textBigSize" text="You have a problem to report?"/>
+                                <Text wrapping="true" class="sapUiSmallMargin textBigSize" text="Before submitting the request make &#10; sure  no actual relevant answer &#10; can be fount in these sections:  "/>
+                                <Link class="sapUiSmallMarginBegin textBigSize" text="FAQ" href="index.html#/faq"/>
+                                <Link class="sapUiSmallMarginBegin textBigSize" text="Guide" href="index.html#/guide"/>
+                            </VBox>
+
+
+                            <VBox   class="sapUiSmallMargin" backgroundDesign="Translucent">
+                                <Text class="sapUiSmallMargin textBigSize" text="Send us a mail"/>
+                                <VBox id="emailForm" class="sapUiSmallMargin">
+                                    <Label class="sapUiSmallMarginTop" text="Name/Subject"/>
+                                    <TextArea id="name" growing="false" cols="80"  placeholder="Name"  rows="1" />
+                                    <Label class="sapUiSmallMarginTop" text="Your Email Address"/>
+                                    <TextArea  id="email" growing="false" cols="80"  placeholder="Email"  rows="1" />
+                                    <Label class="sapUiSmallMarginTop" text="Tell us about your request"/>
+                                    <TextArea id="message" growing="false" cols="80"  placeholder="Message"  rows="4" />
+                                    <HBox>
+                                    <Button id="submitEmail" text="Submit" press="submitRequest" />
+                                    <BusyIndicator id="busySending" visible="false" class="sapUiTinyMargin" text="...sending" />
+                                    </HBox>
+                                    <Label wrapping="true" class="sapUiSmallMarginTop" text="*You will receive a response on email as soon as possible"/>
+                                </VBox>
+                            </VBox>
+                    </HBox>
+                    </VBox>
+                </VBox>
+            </content>
+<!--            <FlexBox width="auto" height="15rem" backgroundDesign="Transparent"/>-->
+        </Panel>
+
+        <mvc:XMLView viewName="sap.ui.Odata.webapp.view.Footer" />
+
+    </Page>
+
+</mvc:View>
