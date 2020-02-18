@@ -40,6 +40,7 @@
                                                text="{i18n>newsTileText}" convertLinksToAnchorTags="All">
                                 </FeedListItem>
                             </List>
+<!--                            <Button class="sapUiLargeMarginBegin" type="Emphasized" text="{i18n>learnMore}" press="navigateTo('som')"/>-->
 							<FlexBox width="100%" alignContent="Center"  justifyContent="Center">
 								<!--							<Button class=" sapUiLargeMarginBegin " type="Emphasized" text="{i18n>learnMore}" press="navigateTo('vcurrency')"/>-->
 								<Link   emphasized="true" text="{i18n>learnMore}" href="index.html#/som"/>
@@ -89,8 +90,6 @@
                                 <Text class="titleBigSize sapUiSmallMarginBottom" text="Trade Smart"/>
                                 <HBox >
                                     <html:p class="startpageText"><html:span >Access the markets, trading tools start learning how to become a trading master with</html:span> <html:span class="sonifFooter">SONIF</html:span> </html:p>
-                                    <!--								<Text class="textNormalSize startpageText" textAlign="Center"  text="Access the markets, trading tools start learning how to become a trading master with"/>-->
-                                    <!--								<Text renderWhitespace="true" text=" Sonif"/>-->
                                 </HBox>
                             </VBox>
                         </HBox>
