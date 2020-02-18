@@ -26,9 +26,6 @@
 
 					</FlexBox>
 
-
-
-
 					<FlexBox class="upFlex stile"  fitContainer="true"  justifyContent="Center" wrap="Wrap"  alignItems="Center" alignContent="SpaceAround" width="100%" height="70%">
                         <items>
                         <FlexBox wrap="Wrap"  class="flexDesign sapUiLargeMargin" width="30%" height="270px">
@@ -118,113 +115,6 @@
 
                     </VBox>
                     <FlexBox class="fade_line full sapUiLargeMarginTop"/>
-
-
-                    <!--					<VBox fitContainer="true" class=" sapUiLargeMarginBottom ">-->
-<!--						<f:SimpleForm  minWidth="1024" class="stile"-->
-<!--									   maxContainerCols="2" editable="false" layout="ResponsiveGridLayout"-->
-<!--									   labelSpanL="4" labelSpanM="4" emptySpanL="0" emptySpanM="0"-->
-<!--									   columnsL="2" columnsM="2">-->
-<!--							<f:content>-->
-<!--								<core:Title text="{i18n>wallet}" class="sapUiLargeMarginBegin sapUiSmallMarginTop" />-->
-<!--									<VBox >-->
-<!--										<MessageStrip customIcon="sap-icon://wallet"  showIcon="true" class="sapUiMediumMarginBegin stripDesign" text="We provide a wallet with full functionality to fulfill all your needs. You obtained a wallet address and you can perform transaction and exchanges."/>-->
-<!--										<Button class="sapUiMediumMarginBegin sapUiSmallMarginTop" type="Emphasized" text="To {i18n>wallet}" press="navigateTo('wallet')"/>-->
-<!--									</VBox>-->
-<!--								<core:Title text="{i18n>watchlist}"  class="sapUiLargeMarginBegin sapUiSmallMarginTop"/>-->
-<!--								<VBox >-->
-<!--									<MessageStrip customIcon="sap-icon://show"  showIcon="true" class="sapUiMediumMarginBegin stripDesign" text="In watchlist section you can view a quick progress of your desired currencies. You can decide witch crypto represent an interest for you and witch not. "/>-->
-<!--									<Button class="sapUiMediumMarginBegin sapUiSmallMarginTop" type="Emphasized" text="To {i18n>watchlist}" press="navigateTo('watchlist')"/>-->
-<!--								</VBox>-->
-<!--							</f:content>-->
-<!--							<f:layoutData>-->
-<!--								<FlexItemData shrinkFactor="0" backgroundDesign="Translucent" />-->
-<!--							</f:layoutData>-->
-<!--						</f:SimpleForm>-->
-
-<!--					</VBox>-->
-
-
-
-
-<!--					<FlexBox class="stile upFlex " backgroundDesign="Solid"   justifyContent="Center" wrap="Wrap"  alignItems="Center" alignContent="SpaceAround" height="70%">-->
-<!--						<items>-->
-<!--							<FlexBox wrap="Wrap" class="flexDesign sapUiLargeMargin startPageMiniTile" width="30%" height="270px">-->
-<!--								<FlexBox height="20%" width="100%" alignContent="Center" justifyContent="Center">-->
-<!--									<Title class="sapUiMediumMarginTop titleNormalSize" text="{i18n>mining}"/>-->
-<!--								</FlexBox>-->
-
-<!--								<FlexBox width="100%"  height="40%" alignContent="Center" justifyContent="Center">-->
-<!--									<FlexBox  width="80%" >-->
-<!--										<Text class="sapUiTinyMarginTop startpageText" text="{i18n>miningTileText}"/>-->
-<!--									</FlexBox>-->
-<!--								</FlexBox>-->
-<!--								<Button class=" sapUiLargeMarginBegin" type="Emphasized" text="{i18n>learnMore}" press="navigateTo('processFlow')"/>-->
-<!--							</FlexBox>-->
-<!--							<FlexBox wrap="Wrap"  class="flexDesign sapUiLargeMargin" width="30%" height="270px">-->
-<!--								<FlexBox wrap="Wrap" height="auto" width="100%" alignContent="Center" justifyContent="Center">-->
-<!--									<Title class="sapUiMediumMarginTop titleNormalSize" text="{i18n>historyProgress}"/>-->
-<!--								</FlexBox>-->
-<!--								<FlexBox height="auto" width="100%" alignContent="Center" alignItems="Center" justifyContent="Center">-->
-<!--									<ImageContent class="iconImage sapUiMediumMarginBegin" src="sap-icon://business-objects-experience"/>-->
-<!--								</FlexBox>-->
-<!--								<Button class=" sapUiLargeMarginBegin" type="Emphasized" text="{i18n>to} {i18n>progress}" press="navigateTo('history')"/>-->
-<!--							</FlexBox>-->
-
-<!--						</items>-->
-<!--					</FlexBox>-->
-<!--					<FlexBox class="fade_line full "/>-->
-
-<!--					<FlexBox class="upFlex " backgroundDesign="Solid"   justifyContent="Center" wrap="Wrap"  alignItems="Center" alignContent="SpaceAround" height="70%">-->
-<!--						<items>-->
-<!--							<FlexBox wrap="Wrap"  class="flexDesign sapUiLargeMarginTop sapUiLargeMarginBottom" width="35%" height="270px">-->
-<!--								<FlexBox wrap="Wrap" height="auto" width="100%" alignContent="Center" justifyContent="Center">-->
-<!--									<Title class="sapUiMediumMarginTop titleNormalSize" text="{i18n>converter}"/>-->
-<!--								</FlexBox>-->
-<!--								<FlexBox height="auto" width="100%" alignContent="Center" alignItems="Center" justifyContent="Center">-->
-<!--									<ImageContent class="iconImage sapUiSmallMarginBegin" src="sap-icon://compare"/>-->
-<!--								</FlexBox>-->
-<!--								<Button class=" sapUiLargeMarginBegin" type="Emphasized" text="{i18n>to} {i18n>converter}" press="navigateTo('converter')"/>-->
-<!--							</FlexBox>-->
-
-<!--							<FlexBox wrap="Wrap"  class="flexDesign sapUiLargeMarginTop sapUiLargeMarginBottom" width="35%" height="270px">-->
-<!--								<FlexBox wrap="Wrap" height="auto" width="100%" alignContent="Center" justifyContent="Center">-->
-<!--									<Title class="sapUiMediumMarginTop startpageText" text="{i18n>summary}"/>-->
-<!--								</FlexBox>-->
-<!--								<FlexBox height="auto" width="100%" alignContent="Center" alignItems="Center" justifyContent="Center">-->
-<!--									<ImageContent class="iconImage sapUiMediumMarginBegin" src="sap-icon://legend"/>-->
-<!--								</FlexBox>-->
-<!--								<Button class=" sapUiLargeMarginBegin" type="Emphasized" text="{i18n>to} {i18n>summary}" press="navigateTo('summary')"/>-->
-<!--							</FlexBox>-->
-<!--						</items>-->
-<!--					</FlexBox>-->
-<!--					<FlexBox class="upFlex " backgroundDesign="Solid"   justifyContent="Center" wrap="Wrap"  alignItems="Center" alignContent="SpaceAround" height="70%">-->
-<!--						<items>-->
-<!--							<FlexBox wrap="Wrap"  class="flexDesign sapUiLargeMarginTop sapUiLargeMarginBottom" width="35%" height="270px">-->
-<!--								<FlexBox wrap="Wrap" height="auto" width="100%" alignContent="Center" justifyContent="Center">-->
-<!--									<Title class="sapUiMediumMarginTop startpageText" text="{i18n>volatility}"/>-->
-<!--								</FlexBox>-->
-<!--								<FlexBox class="sapUiMediumMarginBegin sapUiMediumMarginEnd">-->
-<!--								<Text class=" startpageText sapUiSmallMargin" text="Discover our volatility computer and everything you need to know about it and how it affects market and exchanges. Get started and profit over crypto's volatility."/>-->
-<!--								</FlexBox>-->
-<!--&lt;!&ndash;								<FlexBox height="auto" width="100%" alignContent="Center" alignItems="Center" justifyContent="Center">&ndash;&gt;-->
-<!--&lt;!&ndash;									<ImageContent class="iconImage sapUiSmallMarginBegin" src="sap-icon://compare"/>&ndash;&gt;-->
-<!--&lt;!&ndash;								</FlexBox>&ndash;&gt;-->
-<!--								<Button class=" sapUiLargeMarginBegin" type="Emphasized" text="{i18n>to} {i18n>volatility}" press="navigateTo('volatility')"/>-->
-<!--							</FlexBox>-->
-
-<!--							<FlexBox wrap="Wrap"  class="flexDesign sapUiLargeMarginTop sapUiLargeMarginBottom" width="35%" height="270px">-->
-<!--								<FlexBox wrap="Wrap" height="auto" width="100%" alignContent="Center" justifyContent="Center">-->
-<!--									<Title class="sapUiMediumMarginTop startpageText" text="{i18n>summary}"/>-->
-<!--								</FlexBox>-->
-<!--								<FlexBox height="auto" width="100%" alignContent="Center" alignItems="Center" justifyContent="Center">-->
-<!--									<ImageContent class="iconImage sapUiMediumMarginBegin" src="sap-icon://legend"/>-->
-<!--								</FlexBox>-->
-<!--								<Button class=" sapUiLargeMarginBegin" type="Emphasized" text="{i18n>to} {i18n>summary}" press="navigateTo('summary')"/>-->
-<!--							</FlexBox>-->
-<!--						</items>-->
-<!--					</FlexBox>-->
-
 
 					<VBox alignItems="Center" fitContainer="true" class="stile">
 						<HBox  class="sapUiMediumMarginTop sapUiLargeMarginBottom" alignItems="Center" justifyContent="Center" alignContent="Center" wrap="Wrap">
