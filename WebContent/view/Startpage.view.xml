@@ -90,6 +90,8 @@
                                 <Text class="titleBigSize sapUiSmallMarginBottom" text="Trade Smart"/>
                                 <HBox >
                                     <html:p class="startpageText"><html:span >Access the markets, trading tools start learning how to become a trading master with</html:span> <html:span class="sonifFooter">SONIF</html:span> </html:p>
+                                    <!--								<Text class="textNormalSize startpageText" textAlign="Center"  text="Access the markets, trading tools start learning how to become a trading master with"/>-->
+                                    <!--								<Text renderWhitespace="true" text=" Sonif"/>-->
                                 </HBox>
                             </VBox>
                         </HBox>
