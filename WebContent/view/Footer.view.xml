@@ -8,7 +8,7 @@
                 <Text class="sonifFooter" text="@ 2019 SONIF"/>
                 <Text wrapping="true" class="textNormalSize" text="Become a trading master &#10; with Sonif"/>
             </VBox>
-            <VBox class="sapUiMediumMargin ">
+            <VBox class="sapUiMediumMargin sapUiLargeMarginBegin ">
                 <GenericTile class="" header="{i18n>reviews}"
                              mode="LineMode" press="navigateTo('reviews')" />
                 <FlexBox class="sapUiSmallMarginTop">
@@ -16,7 +16,7 @@
                              mode="LineMode" press="navigateTo('guide')" />
                 </FlexBox>
             </VBox>
-            <VBox  class="sapUiMediumMargin ">
+            <VBox  class="sapUiMediumMargin sapUiLargeMarginBegin ">
                 <GenericTile class="" header="{i18n>forum}"
                              mode="LineMode" press="navigateTo('forum')" />
                 <FlexBox class="sapUiSmallMarginTop">
@@ -25,7 +25,7 @@
                 </FlexBox>
 
             </VBox>
-            <VBox class="sapUiMediumMargin" >
+            <VBox class="sapUiMediumMargin sapUiLargeMarginBegin" >
                 <GenericTile class="" header="{i18n>faq}"
                              mode="LineMode" press="navigateTo('faq')" />
                 <FlexBox class="sapUiSmallMarginTop">
@@ -33,7 +33,7 @@
                              mode="LineMode" press="navigateTo('settings')" />
                 </FlexBox>
             </VBox>
-            <VBox class="sapUiMediumMargin" >
+            <VBox class="sapUiMediumMargin sapUiLargeMarginBegin" >
                 <GenericTile class="" header="{i18n>contact}"
                              mode="LineMode" press="navigateTo('contact')" />
                 <FlexBox class="sapUiSmallMarginTop">
@@ -45,7 +45,7 @@
 <!--        todo knowledge Base-->
         </HBox>
 
-        <FlexBox class="sapUiMediumMarginBegin">
+        <FlexBox class="sapUiLargeMarginBegin">
             <Button
                     type="Emphasized"
                     icon="sap-icon://sap-ui5"

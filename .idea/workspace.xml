@@ -30,11 +30,11 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="javascript.nodejs.core.library.configured.version" value="10.15.3" />
-    <property name="last_opened_file_path" value="D:/sdk/downloads/schemas/sap.f.xsd" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Downloads/Git-2.21.0-64-bit.exe" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="preferences.updates" />
+    <property name="settings.editor.selected.configurable" value="vcs.Git" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -187,7 +187,11 @@
       <workItem from="1575968800234" duration="1894000" />
       <workItem from="1576661014363" duration="1021000" />
       <workItem from="1578474382434" duration="2080000" />
-      <workItem from="1578915091338" duration="651000" />
+      <workItem from="1578915091338" duration="9031000" />
+      <workItem from="1579599220738" duration="24017000" />
+      <workItem from="1580212821746" duration="14749000" />
+      <workItem from="1581413135607" duration="10387000" />
+      <workItem from="1581936441447" duration="3504000" />
     </task>
     <servers />
   </component>
@@ -202,7 +206,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>

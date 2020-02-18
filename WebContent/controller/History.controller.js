@@ -4,8 +4,8 @@ sap.ui.define([
 	"sap/ui/model/json/JSONModel",
 	'sap/m/Dialog',
 	'sap/m/Button',
-	'sap/m/Text',
-], function(MainController,NumberFormat,JSONModel,Dialog,Button,Text) {
+	"sap/m/MessageToast"
+], function(MainController,NumberFormat,JSONModel,Dialog,Button,MessageToast) {
 	"use strict";
 	return MainController.extend("sap.ui.Odata.webapp.controller.History", {
 		onInit: function(){
@@ -30,10 +30,15 @@ sap.ui.define([
 		},
 		getHistoricalData : function(){
 			let type = this.byId("hCurrencyType");
+			type.setValueState(sap.ui.core.ValueState.None);
 			let oModel;
 			let baseExchange= sap.ui.getCore().getModel("settings").getData().BaseExchange;
 			let period = this.byId("hPeriod");
 			let allData = this.byId("hAllData").getSelected();
+			if(type.getSelectedItem() == null ){
+				type.setValueState(sap.ui.core.ValueState.Error);
+				return;
+			}
 			let fiatCoins = type.getSelectedItem().getAdditionalText() === "USD"
 				|| type.getSelectedItem().getAdditionalText() === "EUR";
 			if(type.getSelectedItem()===null || fiatCoins){

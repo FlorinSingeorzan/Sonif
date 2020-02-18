@@ -47,7 +47,7 @@
 						title="{i18n>historyCustom}">
 						<suite:content>
 							<VBox>
-								<FlexBox  wrap="Wrap" justifyContent="Center" class="hSearch sapUiMediumMargin" width="auto" >
+								<FlexBox fitContainer="true" wrap="Wrap" justifyContent="Center" class="hSearch sapUiMediumMargin" width="auto" >
 									<ComboBox placeholder="Select Currency" id="hCurrencyType" showSecondaryValues= "true"
 											  filterSecondaryValues="true"
 											  textAlign="Center"
@@ -62,7 +62,7 @@
 									<Input liveChange="verifyPeriod" textAlign="Center"  id="hPeriod" type="Number" placeholder="Enter Period (max 2000 days)"  class="phonemin sapUiMediumMargin" width="90%"/>
 									<HBox wrap="NoWrap">
 										<CheckBox id="hAllData" select="allHistoryData" class="sapUiMediumMarginTop" wrapping="true" text="All Historical values" width="100%"/>
-										<Button class="sapUiMediumMargin" text="Get" press="getHistoricalData" />
+										<Button class="sapUiMediumMargin" text="Show" press="getHistoricalData" />
 									</HBox>
 								</FlexBox>
 

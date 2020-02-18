@@ -107,9 +107,9 @@ sap.ui.define([
 				let arr2=arr.map((x,y) => Math.log(x / arr[y+1]));
 				console.log(source);
 				arr2.pop();
-				console.log(arr2);
-				console.log(standardDeviation(arr2))
-				console.log(standardDeviation(arr2)*Math.sqrt(60))
+				// console.log(arr2);
+				// console.log(standardDeviation(arr2))
+				// console.log(standardDeviation(arr2)*Math.sqrt(60))
 
 			}).fail(function(err) {
 

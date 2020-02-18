@@ -16,6 +16,12 @@
 	
 }
 
+.startpageIcon :hover{
+    transform: translateY(-10px);
+    color: #465c6e;
+
+}
+
 .toolbar{
 	border-radius: 2px;
 	background: linear-gradient(to top, #485d6f, #2f3c48)!important;
@@ -106,10 +112,14 @@
      background-image: -ms-linear-gradient(left , white 2%, #E6E6E6 50%, white 98%);.
  }
 
+
+
+
 .fade_line.lleft {
     background-image: -webkit-gradient( linear, left bottom, right bottom, color-stop(0.02, white), color-stop(0.5, transparent), color-stop(0.98, transparent) );
     /*background-image: -webkit-gradient( linear, left bottom, right bottom, color-stop(0.02, white), color-stop(0.5, gray), color-stop(0.98, black) );*/
 }
+
 
 .fade_line.llogin {
     background-image: -webkit-gradient( linear, left bottom, right bottom, color-stop(0.02, #2389c7), color-stop(0.5, #647d93), color-stop(0.98, #465c6e) );
@@ -127,19 +137,45 @@
     margin: 0 auto;
 }
 
+/*.fade_line.full {*/
+/*    background-image: -webkit-gradient( linear, left bottom, right bottom, color-stop(0.02, lightgray), color-stop(0.5, gray), color-stop(0.98, lightgray) );*/
+/*    width: 100%;*/
+/*    margin: 0 auto;*/
+/*}*/
+
 .fade_line.full {
-    background-image: -webkit-gradient( linear, left bottom, right bottom, color-stop(0.02, lightgray), color-stop(0.5, gray), color-stop(0.98, lightgray) );
+    /*background-image: -webkit-gradient( linear, left bottom, right bottom, color-stop(0.02, lightgray), color-stop(0.5, gray), color-stop(0.98, lightgray) );*/
+    background: linear-gradient(60deg, #ffffff, #647d93, #2389c7, #000000, #5073b8,#485d6f, #2970b0, #111111);
+    z-index: -1;
+    animation: animatedgradient 3s ease alternate infinite;
     width: 100%;
     margin: 0 auto;
+    background-size: 300% 300%;
 }
 
 .ease_right{
     position: relative;
-    animation: rmove 3s forwards;
+    animation: rmove 10s forwards;
     -webkit-animation: rmove 3s forwards;
 
 
 }
+
+
+@keyframes animatedgradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+
+
 @-webkit-keyframes rmove {
     from {
         left: 0;
@@ -186,7 +222,8 @@
 }
 
 .flexDesign{
-    background: linear-gradient(to top, white, #f5faff);
+    /*background: linear-gradient(to top, white, #f5faff);*/
+    background: #f5faff;
     min-width: 320px;
     /*border: lightgray 1px solid;*/
     /*box-shadow: rgb(223, 227, 235) 0 0 1.5rem 0.4rem*/
@@ -221,7 +258,8 @@
 }
 
 .iconImage .sapMImageContentImageIcon.sapUiIcon{
-    font-size: 7rem;
+    font-size: 5rem;
+
 }
 .iconAbout .sapMImageContentImageIcon.sapUiIcon{
     font-size: 7rem!important;
@@ -544,6 +582,10 @@ html.sap-desktop .sapUiBody :focus {
 
 .phoneWidth{
     min-width: 400px;
+}
+.titleNormalSize{
+    font-size: 22px;
+
 }
 
 .titleBigSize{

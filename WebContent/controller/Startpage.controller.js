@@ -11,6 +11,8 @@ sap.ui.define([
 	}
 	return Controller.extend("sap.ui.Odata.webapp.controller.Startpage", {
 		onInit: function() {
+			// jQuery.sap.storage.put("name", "namespace");		//to set and get session
+			// console.log(jQuery.sap.storage.get("name"));
 			this.callBot()
 			//todo risk page
 		},
@@ -30,6 +32,7 @@ sap.ui.define([
         },
 
 		callBot: function(){
+
 			var currentTime= new Date().getTime()
 				, timeAt3pm = currentTime + 10000
 				, timeNow = new Date().getTime()

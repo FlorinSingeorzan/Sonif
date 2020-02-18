@@ -11,12 +11,16 @@
 				id="wizardContentPage"
 				showHeader="false">
 					<content>
+						<!--								todo wliminate padding and add step colors-->
+
 						<Wizard id="CreateProductWizard"
+								class="sapUiNoContentPadding"
 								enableBranching="true"
 								complete="wizardCompletedHandler"
 								finishButtonText="Generate Transaction">
 								<WizardStep id="SelectType"
 										nextStep="FromCurrencyStep"
+
 										title="Select Type"
 										validated="true">
 								<SegmentedButton  select="setTransferType" id="typeSelection" selectedKey="{CC>/selectedTransactionType}">
@@ -27,6 +31,7 @@
 								</SegmentedButton>
 							</WizardStep>
 							<WizardStep id="FromCurrencyStep"
+										class="stile sapUiNoMargin"
 										subsequentSteps="TransferStep, ExchangeStep"
 										title="Currency Select "
 										validated="false"

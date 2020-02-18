@@ -96,11 +96,8 @@ sap.ui.define([
                     success: function (response) {
                         let appended = response.results.map(function(a) { return (a.Currency === sKey)?1:0;});
                         let present =Number(appended.find(function(a) {return Number(a)!==0 }));
-                        console.log(appended)
-                        console.log(present)
                         if(present!==1) {  // the currency is not present in the watchlist
                             let cWatchlist={};
-                            console.log( response);
                             cWatchlist.Currency = sKey;
                             gModel.create("/WatchlistSet", cWatchlist, mParams);
 
@@ -126,7 +123,7 @@ sap.ui.define([
                     th.byId("watchlistTable").removeItem(oRow);
                 },
                 error : function(oError) {
-                    MessageToast.show("Sometring went wrong.");
+                    MessageToast.show("Something went wrong.");
                 },
                 async : true
             };
@@ -137,7 +134,7 @@ sap.ui.define([
                         let url= "/WatchlistSet(Address='"+publicKey+"',Currency='"+currency+"')";
                         gModel.remove(url, mParams);
                     }, error: function(e){
-                        MessageToast.show("Sometring went wrong.");
+                        MessageToast.show("Something went wrong.");
                     }
                 });
 

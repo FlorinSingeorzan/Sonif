@@ -117,11 +117,6 @@
 					</FlexBox>
 				</items>
 			</FlexBox>
-				<FlexBox class="sapUiLargeMargin">
-					<Text class="textBigSize" text="Volatility Computer"/>
-
-						<Button text="Volatility"/>
-				</FlexBox>
 
 		</content>
 			<FlexBox width="auto" height="15rem" backgroundDesign="Translucent"/>

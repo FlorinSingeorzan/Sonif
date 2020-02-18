@@ -14,11 +14,12 @@
         <content>
             <!--pushpin-off-->
             <FlexBox  class="fade_line mid sapUiLargeMarginTop"/>
-            <VBox class="sapUiLargeMarginTop" wrap="Wrap" justifyContent="Center" alignContent="Center" alignItems="Center">
+            <HBox class="sapUiLargeMarginTop" wrap="Wrap" justifyContent="Center" alignContent="SpaceBetween" alignItems="Center">
+                <Text class="startpageText titleNormalSize sapUiSmallMargin" text="Select currencies of interest:"/>
                 <Input
                         id="watchlistCurrency"
                         type="Text"
-                        width="110%"
+                        width="100%"
                         textFormatMode="KeyValue"
                         placeholder="Enter Currency ..."
                         showSuggestion="true"
@@ -30,7 +31,7 @@
                         <core:ListItem key="{Symbol}" text="{Name}" additionalText="{Symbol}" />
                     </suggestionItems>
                 </Input>
-            </VBox>
+            </HBox>
 
             <Table id="watchlistTable" items="{CCraw>/raw}" noDataText="No currency watched"
                    growing="true" growingThreshold="100" growingScrollToLoad="true">
