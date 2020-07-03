@@ -50,7 +50,7 @@ sap.ui.define([
 				window.history.go(-1);
 			} else {
 				let oRouter = sap.ui.core.UIComponent.getRouterFor(this);
-				oRouter.navTo("home", {}, true);
+				oRouter.navTo("home", null, true);
 			}
 		}
 		

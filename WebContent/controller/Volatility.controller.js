@@ -37,7 +37,9 @@ sap.ui.define([
 
             // this.computeVolatility();
             th.getView().setModel(th.model, "volatility");
-
+            // let data ={"key": 1, "value": [1,2,3]};
+            // let cData = new sap.ui.core.CustomData(data);
+            // this.byId("slider").addCustomData(cData);
 
         },
 
@@ -45,7 +47,6 @@ sap.ui.define([
             th.model.setProperty("/from", "BTC");
             th.model.setProperty("/against", "USD");
             th.getEstimation();
-            this.test()
         },
 
         computeVolatility: function () {
